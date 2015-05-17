@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>example_page</title>
+        <title>printing_lpr</title>
     </head>
 
     <body>
@@ -28,12 +28,12 @@
         <br>
             Aspire S7-392
         <br>
-            15_02_12
+            15_05_17
         <br>#<br>
         <br>
             apt-cache show lpr | grep Version
             <pre>
-                Version: 1:2008.05.17+nmu1
+            Version: 1:2008.05.17+nmu1
             </pre>
         <br># #<br>
         <br>
@@ -42,8 +42,8 @@
                 <br>
                 Simple example:
                 <pre>
-                   echo "salve printer" >> tmp_print 
-                   lpr -P Lexmark_Lexmark_E352dn tmp_print
+                echo "salve printer" >> tmp_print 
+                lpr -P Lexmark_Lexmark_E352dn tmp_print
                 </pre>
                 Where Lexmark_Lexmark_E352dn is the name of your printer. You can get this name by using the technique described below.
 
