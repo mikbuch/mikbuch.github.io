@@ -111,6 +111,7 @@ fi
 
 # xfce settings manager
 alias xfapp='python /chartula/python/xfce/xfce_appearance_change.py'
+alias tap='python /chartula/python/xfce/tap_to_click_xfce.py'
 
 alias dld='cd /home/jesmasta/downloads'
 alias ds='cd /home/jesmasta/amu/neurosci/ds105/'
