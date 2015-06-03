@@ -131,16 +131,16 @@ let Tlist_Inc_Winwidth = 0
 set ruler
 
 " Commenting blocks of code.
-    autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-    autocmd FileType scilab           let b:comment_leader = '// '
-    autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-    autocmd FileType conf,fstab       let b:comment_leader = '# '
-    autocmd FileType tex              let b:comment_leader = '% '
-    autocmd FileType mail             let b:comment_leader = '> '
-    autocmd FileType vim              let b:comment_leader = '" '
-    noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-    noremap <silent> cv :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
+"     autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+"     autocmd FileType scilab           let b:comment_leader = '// '
+"     autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+"     autocmd FileType conf,fstab       let b:comment_leader = '# '
+"     autocmd FileType tex              let b:comment_leader = '% '
+"     autocmd FileType mail             let b:comment_leader = '> '
+"     autocmd FileType vim              let b:comment_leader = '" '
+"     noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+"     noremap <silent> cv :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+" 
 
 
 set foldmethod=indent
@@ -154,3 +154,35 @@ set modeline
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 map! <F3> <C-R>=strftime('%c')<CR>
 nnoremap <silent> <F2> :lchdir %:p:h<CR>:pwd<CR>
+
+" vim-pathoge dependent
+execute pathogen#infect()
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+onoremap <C-A> <C-C>gggH<C-O>G
+snoremap <C-A> <C-C>gggH<C-O>G
+
+" NERDcommenter to add a space after comment character
+let NERDSpaceDelims=1
+
+""""""""""""""""""""""""""""""""""""""""""""
+"           tmux functionality             "
+"                                          "
+""""""""""""""""""""""""""""""""""""""""""""
+" set the terminal title to only the document title currently in focus 
+" http://stackoverflow.com/questions/15123477/tmux-tabs-with-name-of-file-open-in-vim
+
+"" two lines below are from the original solution 
+" autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
+" set title
+
+"" the following 4 lines sets the name of current file to tmux panel
+autocmd BufEnter * call system("tmux rename-window " . expand("%:t"))
+autocmd VimLeave * call system("tmux rename-window bash")
+autocmd BufEnter * let &titlestring = ' ' . expand("%:t")                                                                 
+set title
+""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""
