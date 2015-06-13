@@ -113,23 +113,42 @@ fi
 alias xfapp='python /chartula/python/xfce/xfce_appearance_change.py'
 alias tap='python /chartula/python/xfce/tap_to_click_xfce.py'
 
-alias dld='cd /home/jesmasta/downloads'
-alias d='cd /home/jesmasta/downloads'
-alias ds='cd /home/jesmasta/amu/neurosci/ds105/'
-alias g='gpicview'
-alias neuro='cd /home/jesmasta/amu/neurosci/ds105/sub002/BOLD'
-alias www='cd /var/www'
+# programs and scripts aliases
 alias acroread='acroread -openInNewWindow'
+alias c='python ~/.colours.py'
+alias e='evince'
+alias g='gpicview'
+alias i='iceweasel '
+alias ic='iceweasel &'
 alias iceweasel='iceweasel -new-window'
+alias iq='iceweasel -new-window --private'
 
 alias caret='/opt/caret/bin_linux64/caret5'
 alias scilab='/opt/scilab-5.5.1/bin/scilab'
 alias eclipse='/opt/eclipse/eclipse'
 
+# directories aliases
+alias d='cd /home/jesmasta/downloads'
+alias dld='cd /home/jesmasta/downloads'
+alias ds='cd /home/jesmasta/amu/neurosci/ds105/'
+alias neuro='cd /home/jesmasta/amu/neurosci/ds105/sub002/BOLD'
+alias r='cd /r/'
+alias x='cd /x/'
+alias www='cd /var/www'
+alias z='cd /z/'
+
+# fsl settings
 source /etc/fsl/5.0/fsl.sh
+
+# freesurfer settings
 FREESURFER_HOME=/usr/local/freesurfer
 source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
+# afni settings (global system command)
 PATH=$PATH:/home/jesmasta/soft/linux_openmp_64/
-PATH=$PATH:/opt/caret/bin_linux64/ 
+
+# caret settings (global system command)
+PATH=$PATH:/opt/caret/bin_linux64/
+
+# mricron settings (global system command)
 PATH=$PATH:/home/jesmasta/soft/mricrone/mricron/
