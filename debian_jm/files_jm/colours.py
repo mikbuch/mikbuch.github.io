@@ -8,9 +8,8 @@ cmd = 'python /chartula/python/xfce/xfce_appearance_change.py'
 process = sp.Popen(cmd, stdout=sp.PIPE, shell=True)
 output = process.communicate()[0].rstrip()
 
+# xfce4-terminal settings grey on black
 if output == 'dark':
-    pass
-    # xfce4-terminal settings grey on black
     shutil.copy(
         path.expanduser(
             '~/.config/xfce4/terminal/terminalrc.grey_on_black'
@@ -23,9 +22,8 @@ if output == 'dark':
     cmd = 'tmux source-file ~/.tmux.conf.dark'
     process = sp.Popen(cmd, stdout=sp.PIPE, shell=True)
 
+# xfce4-terminal settings black on white
 else:
-    pass
-    # xfce4-terminal settings black on white
     shutil.copy(
         path.expanduser(
             '~/.config/xfce4/terminal/terminalrc.xterm'
