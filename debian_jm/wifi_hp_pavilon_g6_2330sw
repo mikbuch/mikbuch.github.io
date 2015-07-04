@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>wifi_hp_pavilon_g6_2330sw</title>
+    </head>
+
+    <body>
+        <br>
+        <hr>
+        SUBPAGE MENU
+        <hr>
+        <ul>
+            <li><a href="./index.html">Back</a></li>
+        </ul>
+        <hr>
+        <hr>
+
+        <br># # #<br>
+        <br>
+            wifi_hp_pavilon_g6_2330sw
+        <br># #<br>
+        <br>
+            Description: Debian GNU/Linux 8.1 (jessie)
+        <br>
+            n/a
+        <br>
+            n/a
+        <br>
+            Hp Pavilon g6-2330sw
+        <br>
+            15_07_04
+        <br>#<br>
+        <br>
+
+
+
+        ############################################ <br>
+        # CONTENT <br>
+        ############################################ <br><br>
+
+            You have to install this wifi firmware in order to enable wifi.
+            <br>
+            <br>
+
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='sudo dpkg -i firmware-ralink_0.43_all.deb' 
+                    readonly>
+            </form>
+            <br>
+        <br># #<br>
+        <br>
+
+        <hr>
+        <hr>
+            Troubleshooting:
+            <br>
+            <hr>
+            <br>
+            <br># #<br>
+
+        <hr>
+        <hr>
+            Sources:
+            <hr>
+            <br>
+        <br># # #<br>
+    </body>
+</html>
