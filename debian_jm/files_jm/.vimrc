@@ -67,6 +67,9 @@ filetype plugin on
 syntax enable
 set grepprg=grep\ -nH\ $*
 
+" vim-pathoge dependent
+execute pathogen#infect()
+
 " Who doesn't like autoindent?
 "set autoindent
 
@@ -147,23 +150,30 @@ set foldmethod=indent
 set foldnestmax=2
 nnoremap <space> za
 vnoremap <space> zf
-vnoremap <C-c> "+y
+
+nnoremap <C-C> "+yy :echo line("'>") - line("'<") + 1 'line yanked to system clipboard'<CR>
+nnoremap YY "+yy :echo line("'>") - line("'<") + 1 'line yanked to system clipboard'<CR>
+vnoremap <C-c> "+y :echo line("'>") - line("'<") + 1 'lines yanked to system clipboard'<CR>
+vnoremap <C-C> "+yy :echo line("'>") - line("'<") + 1 'line yanked to system clipboard'<CR>
+vnoremap Y "+y :echo line("'>") - line("'<") + 1 'lines yanked to system clipboard'<CR>
+
+nnoremap <C-P> "+p :echo line("'>") - line("'<") + 1 'line yanked to system clipboard'<CR>
+
 
 set modeline
 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+map <C-q> :echo 'Current time is ' . strftime('%c')<CR>
 map! <F3> <C-R>=strftime('%c')<CR>
 nnoremap <silent> <F2> :lchdir %:p:h<CR>:pwd<CR>
 
-" vim-pathoge dependent
-execute pathogen#infect()
 
 " CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
+" noremap <C-A> gggH<C-O>G
+" inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+" cnoremap <C-A> <C-C>gggH<C-O>G
+" onoremap <C-A> <C-C>gggH<C-O>G
+" snoremap <C-A> <C-C>gggH<C-O>G
 
 " NERDcommenter to add a space after comment character
 let NERDSpaceDelims=1
@@ -186,3 +196,22 @@ autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
 """"""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""
+
+" set mouse options. It is required when using vim in tux.
+" Otherwise tmux scrolls history buffer, not content of file opened in vim
+set mouse=a
+
+" navigation remap
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" first, enable status line always
+set laststatus=2
+
+" now set it up to change the status line based on mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermfg=3 ctermbg=8 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=8 gui=bold,reverse
+endif
