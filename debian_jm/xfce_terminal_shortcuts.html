@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>xfce_terminal_shortcuts</title>
+    </head>
+
+    <body>
+        <br>
+        <hr>
+        SUBPAGE MENU
+        <hr>
+        <ul>
+            <li><a href="./index.html">Back</a></li>
+        </ul>
+        <hr>
+        <hr>
+
+        <br># # #<br>
+        <br>
+            xfce_terminal_shortcuts
+        <br># #<br>
+        <br>
+            Description: Debian GNU/Linux 7.7 (wheezy)
+        <br>
+            #1 SMP Debian 3.16.7-ckt2-1~bpo70+1 (2014-12-08)
+        <br>
+            3.16.0-0.bpo.4-amd64
+        <br>
+            Aspire S7-392
+        <br>
+            15_08_09
+        <br>#<br>
+        <br>
+
+        ############################################ <br>
+        # CONTENT <br>
+        ############################################ <br><br>
+
+            How to change/unbind keys combinations in xfce-terminal. <br> 
+            <br>
+            <br>
+            Open Settings/Appearance, then goto tab “Settings” and check “Enable editable accelerators”.
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='xfce4-appearance-settings' 
+                    readonly>
+            </form>
+            <br>
+
+            Then in xfce4-terminal, click “Help” and hover over “Contents F1″. Press backspace or delete.
+
+            For safety, disable the “Editable accelerators” again.
+
+
+            This creates the file ~/.config/xfce4/terminal/accels.scm, which seems to contain all keyboard shortcuts.
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='~/.config/xfce4/terminal/accels.scm' 
+                    readonly>
+            </form>
+            <br>
+        <br># #<br>
+        <br>
+
+        ############################################ <br>
+        # SOFTWARE VERSION INFO: <br>
+        ############################################ <br><br>
+
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value="apt-cache show xfce4-terminal | grep Version" 
+                    readonly>
+            </form>
+            output: <br>
+                ################################ <br>
+                Version: 0.6.2-4
+                Version: 0.4.8-1+b1
+                ################################ <br>
+        <br># #<br>
+        <br>
+        <hr>
+        <hr>
+            Troubleshooting:
+            <br>
+            <hr>
+            <br>
+            There are still some misterious bindings with F2 and F3 keys.
+            I don't know how to get rid of them.
+            <br># #<br>
+
+        <hr>
+        <hr>
+            Sources:
+            <hr>
+            <br>
+            xfce4-terminal: How-to disable F1 as shortcut for the terminals help <br>
+            <a href="https://blechtog.wordpress.com/2014/10/25/xfce4-terminal-how-to-disable-f1-as-shortcut-for-the-terminals-help/">https://blechtog.wordpress.com/2014/10/25/xfce4-terminal-how-to-disable-f1-as-shortcut-for-the-terminals-help/</a>
+            <br>
+        <br># # #<br>
+    </body>
+</html>
