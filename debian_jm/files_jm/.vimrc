@@ -162,10 +162,12 @@ nnoremap <C-P> "+p :echo line("'>") - line("'<") + 1 'line yanked to system clip
 
 set modeline
 
-map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-map <C-q> :echo 'Current time is ' . strftime('%c')<CR>
-map! <F3> <C-R>=strftime('%c')<CR>
-nnoremap <silent> <F2> :lchdir %:p:h<CR>:pwd<CR>
+map <F2> ggVG
+map! <F2> ggVG
+map <F3> ggVGD
+map! <F3> ggVGD
+map <F4> ggVG"+D
+map! <F4> ggVG"+D
 
 
 " CTRL-A is Select all
@@ -174,6 +176,17 @@ nnoremap <silent> <F2> :lchdir %:p:h<CR>:pwd<CR>
 " cnoremap <C-A> <C-C>gggH<C-O>G
 " onoremap <C-A> <C-C>gggH<C-O>G
 " snoremap <C-A> <C-C>gggH<C-O>G
+
+map <m-a> :echo 'Current time is ' . strftime('%c')<CR>
+map <C-n> :echo 'Current time is ' . strftime('%c')<CR>
+map <C-N> :echo 'Current time SHIFT is ' . strftime('%c')<CR>
+
+" set <m-a> = ^[a
+" map <m-a> ggVG
+" the ^[ is an Esc char that comes before the 'a'
+" " In most default configs, ^[a may be typed by pressing first <C-v>, then
+" <M-a>
+
 
 " NERDcommenter to add a space after comment character
 let NERDSpaceDelims=1
@@ -197,7 +210,7 @@ set title
 """"""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""
 
-" set mouse options. It is required when using vim in tux.
+" set mouse options. It is required when using vim in tmux.
 " Otherwise tmux scrolls history buffer, not content of file opened in vim
 set mouse=a
 
