@@ -26,4 +26,5 @@ ScrollingOnOutput=FALSE
 ScrollingOnKeystroke=FALSE
 CommandUpdateRecords=FALSE
 ScrollingSingleLine=FALSE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
 
