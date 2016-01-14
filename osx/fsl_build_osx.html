@@ -38,16 +38,103 @@
         # CONTENT <br>
         ############################################ <br><br>
 
-            How to do sth in Linux: <br><br>
-            
+            How to build fsl from source on OS X: <br><br>
+            Basic information can be found at: <br>
+            <a href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/SourceCode">http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/SourceCode</a><br>
+
+            It is recommended by me that you create directory at your home folder (as described in the link above):<br>
             command:
             <form>
                 <input 
                     type="text" 
                     size="79"
-                    value='example_command' 
+                    value='mkdir ~/fslbuild' 
                     readonly>
             </form><br>
+            Then move downloaded tar file with the source code into newly created directory and untar it.
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='mv ~/*ownloads/fsl*.tar.gz ~/fslbuild' 
+                    readonly>
+            </form><br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='cd ~/fslbuild' 
+                    readonly>
+            </form><br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='tar zxf fsl*-sources.tar.gz' 
+                    readonly>
+            </form><br>
+            <br>
+            Set the main FSL environment variables (for version 5.0.6 and above you first need to uncomment the lines related to FSLCONFDIR and FSLMACHTYPE in $FSLDIR/etc/fslconf/fsl.sh):<br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='vim $FSLDIR/etc/fslconf/fsl.sh' 
+                    readonly>
+            </form><br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='export FSLDIR=`pwd`/fsl' 
+                    readonly>
+            </form><br>
+            <br>
+            After the modifications run fsl.sh - FSL's configuration file<br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='. ${FSLDIR}/etc/fslconf/fsl.sh' 
+                    readonly>
+            </form><br>
+            Check if the comiler machine has been automatically detected.<br>
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='. ${FSLDIR}/etc/fslconf/fsl.sh' 
+                    readonly>
+            </form><br>
+            If the above directory does not exist (the ls returns an error).<br>
+            Check your machine/compiler version:
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='llvm-gcc --version' 
+                    readonly>
+            </form><br>
+            Select the closest match from the directories in $FSLDIR/config and do the following (e.g. for apple-darwin13-llvm5.1):<br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='cp -r $FSLDIR/config/apple-darwin13-llvm5.1/' 
+                    readonly>
+            </form><br>
+
+            <br>
+
+
         <br># #<br>
         <br>
 
