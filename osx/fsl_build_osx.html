@@ -17,7 +17,7 @@
 
         <br># # #<br>
         <br>
-            fsl_install_osx
+            fsl_build_osx
         <br># #<br>
         <br>
             Description: Debian GNU/Linux 7.7 (wheezy)
@@ -104,12 +104,12 @@
                     value='. ${FSLDIR}/etc/fslconf/fsl.sh' 
                     readonly>
             </form><br>
-            Check if the comiler machine has been automatically detected.<br>
+            Check if the compiler machine has been automatically detected.<br>
             <form>
                 <input 
                     type="text" 
                     size="79"
-                    value='. ${FSLDIR}/etc/fslconf/fsl.sh' 
+                    value='ls $FSLDIR/config/$FSLMACHTYPE' 
                     readonly>
             </form><br>
             If the above directory does not exist (the ls returns an error).<br>
@@ -128,12 +128,43 @@
                 <input 
                     type="text" 
                     size="79"
-                    value='cp -r $FSLDIR/config/apple-darwin13-llvm5.1/' 
+                    value='cp -r $FSLDIR/config/apple-darwin13-llvm5.1/ $FSLDIR/config/$FSLMACHTYPE' 
                     readonly>
             </form><br>
 
-            <br>
-
+        ############################################ <br>
+        # TROUBLESHOOTING: <br>
+        ############################################ <br><br>
+        !!ERROR in BUILD!!<br>
+        &nbsp;&nbsp;Could not make the following projects successfully:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;fslsurface film ptx2<br>
+        <br>
+        SOLUTION:<br>
+        You have to edit Makefile of the fslsurface. In newer versions of OS X different graphical libraries has to be used:
+        command:
+        <form>
+            <input 
+                type="text" 
+                size="79"
+                value='vim $FSLDIR/src/fslsurface/Makefile' 
+                readonly>
+        </form><br>
+        Change (line 10):
+        <form>
+            <input 
+                type="text" 
+                size="79"
+                value='        FMLIBS += -lGL -lGLU' 
+                readonly>
+        </form><br>
+        to
+        <form>
+            <input 
+                type="text" 
+                size="79"
+                value='        FMLIBS += -framework OpenGL -framework GLUT' 
+                readonly>
+        </form><br>
 
         <br># #<br>
         <br>
