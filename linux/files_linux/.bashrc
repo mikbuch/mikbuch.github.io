@@ -113,8 +113,9 @@ fi
 alias xfapp='python /chartula/python/xfce/xfce_appearance_change.py'
 alias tap='python /chartula/python/xfce/tap_to_click_xfce.py'
 
-# programs and scripts aliases
+# programs, scripts and commands - aliases
 alias acroread='acroread -openInNewWindow'
+alias b='/home/jesmasta/git/mikbuch.github.io/linux/files_linux/brightness.sh'
 alias c='python ~/.colours.py'
 alias e='evince'
 alias g='gpicview'
@@ -123,21 +124,31 @@ alias ic='iceweasel &'
 alias iceweasel='iceweasel -new-window'
 alias iq='iceweasel -new-window --private'
 alias m='mplayer -zoom -fs'
+alias nonzero='python /home/jesmasta/git/pymri/pymri/utils/standalone/count_nonzero.py'
+alias pm='bash /git/debian_jm/bashrc/pymri_install.sh'
 alias s='python ~/.sound.py'
 alias v='vim'
+alias zotero='/home/jesmasta/soft/Zotero_linux-x86_64/zotero'
 
 alias caret='/opt/caret/bin_linux64/caret5'
 alias scilab='/opt/scilab-5.5.1/bin/scilab'
 alias eclipse='/opt/eclipse/eclipse'
 
-# directories aliases
+# directories, folders - aliases
 alias d='cd /home/jesmasta/downloads'
 alias dld='cd /home/jesmasta/downloads'
 alias ds='cd /home/jesmasta/amu/neurosci/ds105/'
+alias master='cd /amu/master'
 alias neuro='cd /home/jesmasta/amu/neurosci/ds105/sub002/BOLD'
-alias r='cd /r/'
-alias x='cd /x/'
+alias p='cd /git/pymri'
+alias t='cd /tmp'
+alias tmp='cd /tmp'
+# alias wd='cd /home/jesmasta/git/pyseeg/pyseeg/openbci/scripts'
+alias wd='cd /home/jesmasta/git/pymri/pymri/gui/'
+# alias wd='cd /home/jesmasta/git/pymri/examples/'
 alias www='cd /var/www'
+alias x='cd /x/'
+alias y='cd /home/jesmasta/git/pyseeg/pyseeg/openbci/scripts/'
 alias z='cd /z/'
 
 # fsl settings
@@ -155,3 +166,11 @@ PATH=$PATH:/opt/caret/bin_linux64/
 
 # mricron settings (global system command)
 PATH=$PATH:/home/jesmasta/soft/mricrone/mricron/
+
+# disable flow control for that terminal completely (not just for vim). 
+stty -ixon
+
+export PYLEARN2_DATA_PATH=/home/jesmasta/downloads/pylearn2_data
+
+# load tmux settings
+tmux source-file ~/.tmux.conf
