@@ -46,6 +46,9 @@
         <br>
             How to do disable touchscreen in Linux: <br><br>
 
+            <br>
+            ######
+            <br>
             1. Edit /usr/share/X11/xorg.conf.d/10-evdev.conf
             <br>
             <br>
@@ -58,10 +61,14 @@
                     value='sudo vim /usr/share/X11/xorg.conf.d/10-evdev.conf' 
                     readonly>
             </form>
+            ######
             <br>
 
+            <br>
+            ######
+            <br>
             2. Add Option "Ignore" "on" to the end of the section with the touchscreen identifier.
-
+            <br>
             example:
             <br>
 
@@ -74,9 +81,15 @@
                     Option "Ignore" "on"
             EndSection
             </pre>
+            ######
+            <br>
 
             <br>
+            ######
+            <br>
             3. Reboot
+            <br>
+            ######
             <br>
 
         ############
