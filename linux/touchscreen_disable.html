@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>touchscreen_disable</title>
+    </head>
+
+    <body>
+        <br>
+        <hr>
+        SUBPAGE MENU
+        <hr>
+        <ul>
+            <li><a href="./index.html">Back</a></li>
+        </ul>
+        <hr>
+        <hr>
+
+        <br>
+        <br>
+        <br>
+        touchscreen_disable
+        <br>
+        <br>
+        <br>
+
+        <br>
+        #
+        <br>
+            Last modified <br>
+            16_05_01
+        <br>
+        #
+        <br>
+        <br>
+
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #                 CONTENT                    <br>
+        #                                            <br>
+        ############################################ <br>
+
+        <br>
+        ############
+        <br>
+            How to do disable touchscreen in Linux: <br><br>
+
+            1. Edit /usr/share/X11/xorg.conf.d/10-evdev.conf
+            <br>
+            <br>
+
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='sudo vim /usr/share/X11/xorg.conf.d/10-evdev.conf' 
+                    readonly>
+            </form>
+            <br>
+
+            2. Add Option "Ignore" "on" to the end of the section with the touchscreen identifier.
+
+            example:
+            <br>
+
+            <pre>
+            Section "InputClass"
+                    Identifier "evdev touchscreen catchall"
+                    MatchIsTouchscreen "on"
+                    MatchDevicePath "/dev/input/event*"
+                    Driver "evdev"
+                    Option "Ignore" "on"
+            EndSection
+            </pre>
+
+            <br>
+            3. Reboot
+            <br>
+
+        ############
+        <br>
+
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #          SOFTWARE VERSION INFO             <br>
+        #                                            <br>
+        ############################################ <br>
+
+            <br>
+            Description: Debian GNU/Linux 7.7 (wheezy)
+            <br>
+            #1 SMP Debian 3.16.7-ckt2-1~bpo70+1 (2014-12-08)
+            <br>
+            3.16.0-0.bpo.4-amd64
+            <br>
+            Aspire S7-392
+            <br>
+
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #           TROUBLESHOOTING                  <br>
+        #                                            <br>
+        ############################################ <br>
+            
+            <br>
+            no trouble
+            <br>
+
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #               SOURCES                      <br>
+        #                                            <br>
+        ############################################ <br>
+
+            <br>
+            ############
+            <br>
+            How do I disable the touchscreen drivers? <br>
+            <a href="http://askubuntu.com/questions/198572/how-do-i-disable-the-touchscreen-drivers">http://askubuntu.com/questions/198572/how-do-i-disable-the-touchscreen-drivers</a>
+            <br>
+            ############
+            <br>
+
+        <br>########################<br>
+    </body>
+</html>
