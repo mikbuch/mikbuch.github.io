@@ -7,11 +7,13 @@
 #
 #
 
-# inter
-# [[ $- != *i* ]] && return
-
 # beep settings - turn of pcspeaker so that it won't beep anymore
-rmmod pcspkr
+if lsmod | grep "pcspkr" &> /dev/null ; then
+    echo "pcspkr is loaded, removing"
+    rmmod pcspkr
+else
+    echo "pcspkr isn't loaded"
+fi
 
 # font settings
 setfont /usr/share/kbd/consolefonts/ter-u18b.psf.gz
