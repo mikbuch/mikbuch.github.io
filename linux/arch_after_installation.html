@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>arch_after_installation</title>
+    </head>
+
+    <body>
+        <br>
+        <hr>
+        SUBPAGE MENU
+        <hr>
+        <ul>
+            <li><a href="./index.html">Back</a></li>
+        </ul>
+        <hr>
+        <hr>
+
+        <br>
+        <br>
+        <br>
+        arch_after_installation
+        <br>
+        <br>
+        <br>
+
+        <br>
+        #
+        <br>
+            Last modified <br>
+            16_05_01
+        <br>
+        #
+        <br>
+        <br>
+
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #                 CONTENT                    <br>
+        #                                            <br>
+        ############################################ <br>
+
+        <br>
+        ############
+        <br>
+            1. Basic bash ls alias:
+            <br>
+            <br>
+            
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value="echo l='ls -l --color=auto' >> ~/.bashrc" 
+                    readonly>
+            </form>
+            <br>
+            Load bash settings.
+            <br>
+            <br>
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value="source ~/.bashrc" 
+                    readonly>
+            </form>
+            <br>
+        ############
+        <br>
+
+        <br>
+        ############
+        <br>
+            2. Install vim:
+            <br>
+            <br>
+            
+            command:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value="pacman -S vim"
+                    readonly>
+            </form>
+        ############
+        <br>
+
+        3. Add 'syntax on', 'set nu!' and 'set hlsearch' to your ~/.vimrc
+        <br>
+        4. Install tmux (pacman -S tmux). Trouble: need UTF-8, has ASCII. Solution: see point 5. - locale settings.
+        <br>
+        5. Uncomment 'en_US.UTF-8 UTF-8' line in your '/etc/locale.gen' file (line163 in my case). Then load change with 'locale-gen' command.
+        <br>
+        6. Bash configuration: add "alias t='cd /tmp'". Source ~/.bash_profile
+        <br>
+        Note: use .bash_profile, not .bashrc because .bashrc is not loaded at startup
+        <br>
+        7. Turn of annoying PC spearker beeps with 'rmmod pcspkr' command.
+        <br>
+        Add this command to your .bash_profile to make it run at login
+        <br>
+        8. Run 'pacman -Sy' command. Some packages are unavailable without it.
+        <br>
+        9. Install internet browser: 'pacman -S lynx'.
+        <br>
+        10. Install python: 'pacman -S python'.
+        <br>
+        11. Install ipython: 'pacman -S ipython'.
+        <br>
+        12. Install kbd package for consolefonts managament 'pacman -S kbd'.
+        <br>
+        13. Install terminus fonts package for consolefonts 'pacman -S terminus-font'.
+        <br>
+        14. Set bigger font 'setfont /usr/share/kbd/consolefonts/ter-u20b.psf.gz'
+        <br>
+        Add this command to your .bash_profile to make it run at login
+        <br>
+        15. Create ~/git directory, sync git package: 'pacman -S git'
+        <br>
+        16. Configure your github "git config --global -edit" or "git config --global user.email "sth@somewhere.com""
+        <br>
+        17. TMUX configuration. Create .tmux_conf "vim ~/.tmux_conf" or download tmux configuration file with "curl https://raw.githubusercontent.com/mikbuch/mikbuch.github.io/master/linux/files_linux/arch_config/.tmux_config --output ~/.bash_profile"
+        <br>
+        18. Install desktop envirnoment: "packman -S gamin lxde-common" 
+
+
+
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #          SOFTWARE VERSION INFO             <br>
+        #                                            <br>
+        ############################################ <br>
+
+            <br>
+            Description: Debian GNU/Linux 7.7 (wheezy)
+            <br>
+            #1 SMP Debian 3.16.7-ckt2-1~bpo70+1 (2014-12-08)
+            <br>
+            3.16.0-0.bpo.4-amd64
+            <br>
+            Aspire S7-392
+            <br>
+
+        <!-- BEGINS -->
+        <!-- THIS SECTION YOU CAN DELETE IF THERE IS NO SOFTWARE -->
+            <br>
+            ############
+            <br>
+                command:
+                <form>
+                    <input 
+                        type="text" 
+                        size="79"
+                        value='example_command' 
+                        readonly>
+                </form><br>
+                output: <br>
+                    -------------------------------- <br>
+                    example_output <br>
+                    -------------------------------- <br>
+            ############
+            <br>
+        <!-- THIS SECTION YOU CAN DELETE IF THERE IS NO SOFTWARE -->
+        <!-- ENDS -->
+
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #           TROUBLESHOOTING                  <br>
+        #                                            <br>
+        ############################################ <br>
+            
+        <!-- BEGINS -->
+        <!-- THIS SECTION YOU CAN DELETE IF THERE ARE NO TROUBLES -->
+            <br>
+            ############
+            <br>
+            Trouble no. 1:
+            <br>
+            xyz
+            <br>
+            <br>
+            Solution:
+            <br>
+            ghi
+            <br>
+            ############
+            <br>
+
+            <br>
+            ############
+            <br>
+            Trouble no. 2:
+            <br>
+            abc
+            <br>
+            <br>
+            Solution: <br>
+            def
+            <br>
+            ############
+            <br>
+        <!-- THIS SECTION YOU CAN DELETE IF THERE ARE NO TROUBLES -->
+        <!-- ENDS -->
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #               SOURCES                      <br>
+        #                                            <br>
+        ############################################ <br>
+
+        <!-- BEGINS -->
+        <!-- THIS SECTION YOU CAN DELETE IF THERE ARE NO SOURCES -->
+            <br>
+            ############
+            <br>
+            Source title no. 1 <br>
+            <a href="source_no_1_url">source_no_1_url</a>
+            <br>
+            ############
+            <br>
+
+            <br>
+            ############
+            <br>
+            Source title no. 2 <br>
+            <a href="source_no_2_url">source_no_2_url</a>
+            <br>
+            ############
+            <br>
+        <!-- THIS SECTION YOU CAN DELETE IF THERE ARE NO SOURCES -->
+        <!-- ENDS -->
+
+        <br>########################<br>
+    </body>
+</html>
