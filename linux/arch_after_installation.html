@@ -27,7 +27,7 @@
         #
         <br>
             Last modified <br>
-            16_05_01
+            16_07_26
         <br>
         #
         <br>
@@ -40,6 +40,45 @@
         #                 CONTENT                    <br>
         #                                            <br>
         ############################################ <br>
+
+        This is a very basic configuration for newly installed arch linux. <br>
+        <br>
+        <br>
+        0. Font configuration:
+            * optional step, in case in which your font is too small
+            * if you have internet connection download terminus font with:
+                curl https://raw.githubusercontent.com/mikbuch/mikbuch.github.io/master/linux/files_linux/arch_config/ter-u32b.psf.gz --output /usr/share/kbd/consolefonts/ter-u32b.psf.gz <br>
+            * use command: setfont /usr/share/kbd/consolefonts/ter-u32b.psf.gz
+            * create /etc/vconsole.conf containing settings with the following command: echo 'FONT=ter-u32b.psf.gz' >> /etc/vconsole.conf 
+        1. Bash confuguration: <br>
+            * if you have internet connection dowload configuration files: <br>
+                curl https://raw.githubusercontent.com/mikbuch/mikbuch.github.io/master/linux/files_linux/arch_config/.bash_profile --output ~/.bash_profile <br>
+                curl https://raw.githubusercontent.com/mikbuch/mikbuch.github.io/master/linux/files_linux/arch_config/.bashrc --output ~/.bashrc <br>
+             * note: .bash_profile is run at startup and it directs to .bashrc <br>
+             * if you don't have internet create ad hoc bash config files: <br>
+                echo [[ -f ~/.bashrc ]] && . ~/.bashrc >> ~/.bash_profile <br>
+                echo l='ls -l --color=auto' >> ~/.bashrc <br>
+        <br>
+        2. Network configuration: <br>
+            * if you have wired connection it should be all set up <br>
+            * wireless connection: <br>
+                wpa_supplicant <br>
+                wifi-menu -o <br>
+                ntctl start /etc/netctl/interface <br>
+                    e.g. netctl start wlp1s0-I241WS-F4A54DF6 <br>
+                ntctl enable /etc/netctl/interface <br>
+        <br>
+        3. Git directory creation and configuration files download:
+            * recommended location for git main directory is ~/git, so: mkdir ~/git
+            * git clone https://github.com/mikbuch/mikbuch.github.io
+        <br>
+        4. Brightness setting
+        <br>
+        5. VIM configuration: <br>
+        <br>
+        6. TMUX configuration: <br>
+        <br>
+
 
         <br>
         ############
