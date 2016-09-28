@@ -44,7 +44,7 @@
         <br>
         ############
         <br>
-            How to do sth in OS X: <br><br>
+            How to deal with github not asking for username in OS X: <br><br>
             
             <br>
             1. Start keychain access (start spotlight via cmd + space, type keychain, press enter).
@@ -52,6 +52,35 @@
             2. Under keychains on the upper left, select "login" Under category on the left, select "passwords".
             <br>
             3. Find the name "github" and delete it.
+            <br>
+
+            4. Unset the credential osxkeychain to prevent it from happening in the future, with the following commands:
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='git config --local --unset credential.helper' 
+                    readonly
+                >
+            </form>
+            <br>
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='git config --global --unset credential.helper' 
+                    readonly
+                >
+            </form>
+            <br>
+            <form>
+                <input 
+                    type="text" 
+                    size="79"
+                    value='sudo git config --system --unset credential.helper' 
+                    readonly
+                >
+            </form>
             <br>
 
         ############
@@ -76,6 +105,8 @@
                 </form>
             <br>
             Darwin Kernel Version 15.6.0: Thu Jun 23 18:25:34 PDT 2016; root:xnu-3248.60.10~1/RELEASE_X86_64
+            <br>
+
             <br>
 
             <br>
@@ -114,6 +145,15 @@
             <br>
             Git pushes with wrong user from terminal <br>
             <a href="http://stackoverflow.com/a/24130956">http://stackoverflow.com/a/24130956</a>
+            <br>
+            ############
+            <br>
+
+            <br>
+            ############
+            <br>
+            Disable git credential osxkeychain <br>
+            <a href="http://stackoverflow.com/a/16054406">http://stackoverflow.com/a/16054406</a>
             <br>
             ############
             <br>
