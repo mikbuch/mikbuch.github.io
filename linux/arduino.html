@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>arduino</title>
+    </head>
+
+    <body>
+        <br>
+        <hr>
+        SUBPAGE MENU
+        <hr>
+        <ul>
+            <li><a href="./index.html">Back</a></li>
+        </ul>
+        <hr>
+        <hr>
+
+        <br>
+        <br>
+        <br>
+        arduino
+        <br>
+        <br>
+        <br>
+
+        <br>
+        #
+        <br>
+            Last modified <br>
+            16_10_16
+        <br>
+        #
+        <br>
+        <br>
+
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #                 CONTENT                    <br>
+        #                                            <br>
+        ############################################ <br>
+
+        <br>
+        ############
+        <br>
+            How to control Arduino board with Python in Linux: <br><br>
+            
+1. Create file for arduino native software and load it to the board:
+<br>
+<br>
+
+<pre>
+const int ledPin = 13; // the pin that the LED is attached to
+int incomingByte;      // a variable to read incoming serial data into
+
+void setup() {
+  // initialize serial communication:
+  Serial.begin(9600);
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // see if there's incoming serial data:
+  if (Serial.available() > 0) {
+    // read the oldest byte in the serial buffer:
+    incomingByte = Serial.read();
+    // if it's a capital H (ASCII 72), turn on the LED:
+    if (incomingByte == 'H') {
+      digitalWrite(ledPin, HIGH);
+    } 
+    // if it's an L (ASCII 76) turn off the LED:
+    if (incomingByte == 'L') {
+      digitalWrite(ledPin, LOW);
+    }
+  }
+}
+</pre>
+
+<br>
+
+2. Use the following python commands:
+	<form>
+		<input 
+			type="text" 
+			size="79"
+			value='import serial' 
+			readonly>
+	</form>
+
+	<form>
+		<input 
+			type="text" 
+			size="79"
+			value='ser = serial.Serial("/dev/ttyACM0", 9600)' 
+			readonly>
+	</form>
+
+	<form>
+		<input 
+			type="text" 
+			size="79"
+			value='ser.write("H")' 
+			readonly>
+	</form>
+
+	<form>
+		<input 
+			type="text" 
+			size="79"
+			value='ser.write("L")' 
+			readonly>
+	</form>
+############
+<br>
+
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #          SOFTWARE VERSION INFO             <br>
+        #                                            <br>
+        ############################################ <br>
+
+            <br>
+            ############
+            <br>
+            Arduino software version: 1.6.12
+            <br>
+
+            ############
+            <br>
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #           TROUBLESHOOTING                  <br>
+        #                                            <br>
+        ############################################ <br>
+            
+
+        <br>
+        <br>
+        <br>
+        ############################################ <br>
+        #                                            <br>
+        #               SOURCES                      <br>
+        #                                            <br>
+        ############################################ <br>
+
+            <br>
+            ############
+            <br>
+            Source title no. 1 <br>
+            <a href="http://hacknmake.blogspot.com/2013/07/control-led-with-arduino-and-python.html">http://hacknmake.blogspot.com/2013/07/control-led-with-arduino-and-python.html</a>
+            <br>
+            ############
+            <br>
+
+        <br>########################<br>
+        EOF
+    </body>
+</html>
