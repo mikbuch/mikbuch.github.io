@@ -1,0 +1,44 @@
+#
+# ~/.bashrc
+#
+#
+# Introductory comments:
+#
+############################################
+# FONT SETTINGS
+#
+# The best way to set font is to create /etc/vconsole.conf
+# file:
+#
+# echo 'FONT=ter-u32b.psf.gz' >> /etc/vconsole.conf
+#
+# It is global font setting and it is initiated at 
+# boot. If you don't want this global setting or you wish
+# to have user-specific font put th following line in your
+# ~/.bashrc file:
+#
+# setfont /usr/share/kbd/consolefonts/ter-u32b.psf.gz
+#
+############################################
+
+# Start tmux session on login.
+#if command -v tmux>/dev/null; then
+#    [[ ! $TERM =~  screen ]] && [ -z $TMUX ] && exec tmux
+#fi
+
+# COMMANDS ALIASES
+alias b='brightness'
+alias i='firefox -new-window'
+alias iq='firefox -new-window --private'
+alias l='ls -l --color=auto'
+alias lx='lynx duckduckgo.com'
+alias lxn='lynx wiki.archlinux.org/index.php/Netctl'
+alias pingarch='ping www.archlinux.org'
+alias m='mplayer -fs'
+
+# DIRECTORIES ALIASES
+alias d='cd /$USER/Downloads'
+alias t='cd /tmp'
+
+export LANG=en_US.UTF-8
+export LC_MESSAGES="C"
