@@ -21,6 +21,8 @@
 #
 ############################################
 
+PS1='${debian_chroot:+($debian_chroot)}[\e[0;33m\u\e[m \w]\$ '
+
 # Start tmux session on login.
 #if command -v tmux>/dev/null; then
 #    [[ ! $TERM =~  screen ]] && [ -z $TMUX ] && exec tmux
@@ -28,6 +30,7 @@
 
 # COMMANDS ALIASES
 alias b='brightness'
+alias e='evince'
 alias i='firefox -new-window'
 alias iq='firefox -new-window --private'
 alias l='ls -l --color=auto'
@@ -36,9 +39,18 @@ alias lxn='lynx wiki.archlinux.org/index.php/Netctl'
 alias pingarch='ping www.archlinux.org'
 alias m='mplayer -fs'
 
+if [ "$(whoami)" != 'root' ]; then
+    USER_PREFIX='/home'
+else
+    USER_PREFIX=''
+fi
+
 # DIRECTORIES ALIASES
-alias d='cd /$USER/Downloads'
+alias d='cd $USER_PREFIX/$USER/Downloads'
 alias t='cd /tmp'
 
 export LANG=en_US.UTF-8
 export LC_MESSAGES="C"
+
+# Required for ctrl+s vim save.
+stty -ixon
