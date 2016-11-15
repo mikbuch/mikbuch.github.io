@@ -21,7 +21,12 @@
 #
 ############################################
 
-PS1='${debian_chroot:+($debian_chroot)}[\e[0;33m\u\e[m \w]\$ '
+# Stay away from the voodoo (color changes, it can mess up with line wrapping in the terminal).
+# http://askubuntu.com/a/24422
+
+cyan=$(tput setaf 6) # \e[36m
+reset=$(tput sgr0)   # \e[0m
+PS1='[\[$cyan\]\u\[$reset\] \W]$ '
 
 # Start tmux session on login.
 #if command -v tmux>/dev/null; then
