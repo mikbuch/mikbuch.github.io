@@ -49,13 +49,15 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 twm &
-# xterm should be maximized with openbox (application settings)
-xterm tmux  &
+
 # exec xterm -geometry 80x66+0+0 -name login
 feh --bg-scale Pictures/tariser_2560_1440.jpg
 
 # Set polish keyboard layout
 setxkbmap pl
 obsetlayout 0 2 2 0
+
+# xterm should be maximized with openbox (application settings)
+xterm tmux &
 
 exec openbox
