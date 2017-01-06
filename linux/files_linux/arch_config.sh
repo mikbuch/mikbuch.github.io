@@ -1,38 +1,49 @@
 #!/bin/bash
 
-# This script has two arguments.
-# The settings can be applied either locally or globally.
-# Local settings are paced mostly in ~/ home directory.
-# Global settings have place in /etc directory.
-
-# All files are backed up before overwriting with cp command.
+# name: arch_config.sh
+# type: script
+# description:
+#
+# Automatically load all Arch linux settings.
+# Original files and this script can be found at:
+# https://github.com/mikbuch/arch_config
+#
 
 
 ############################################
 #
-# User has to specify range of the settings
+#   FUNCITONS SECTION
 #
-# This conditions doesnt look spectacular.
-# Bash is a very demanding language in terms of conditions.
 
-argument_specified=true
+function load_to_home_dir {
+    # Copy previous bashrc to the backup directory.
+    if [[ -f ~/.$FILE ]]; then
+        cp ~/.$FILE $BACKUP_DIR/bashrc_$BACKUP_CODE
+    fi
+    # Introduce a new bashrc (with cereberus config).
+    cp $CONFIG_PATH/$FILE ~/.$FILE
+    }
+
+
+
+############################################
+#
+# User can specify settings path
+#
+
+# Check if directory specified
 if [[ $# -eq 0 ]]; then
     argument_specified=false
-fi
-
-if [[ ! ("$1" == "local" || "$1" == "global") ]]; then
-    argument_specified=false
+else
+    argument_specified=true
 fi
 
 if [[ $argument_specified = false ]]; then
-    echo ""
-    echo "You MUST specify range of the settings."
-    echo "Two options are available:"
-    echo " * local settings, e.g. bash arch_conf.sh local"
-    echo " * global settings, e.g. bash arch_conf.sh global"
-    echo "     - global settings needs root privileges"
-    echo ""
-    exit 0
+    printf "\nNo directory specified.\n"
+    printf "Using default config location at: ~/.config/cereberus_arch\n"
+    CONFIG_PATH="~/.config/cereberus_arch"
+else
+    CONFIG_PATH="$1"
 fi
 
 
@@ -40,115 +51,70 @@ fi
 #
 # Create directory containing confs
 #
-if [ ! -d arch_config ]; then
-    mkdir arch_config
+if [ ! -d CONFIG_PATH ]; then
+    mkdir CONFIG_PATH
 else
-    echo "*** WARNING ***"
-    echo "Directory arch_config already exists, skipping."
+    printf "\n *** WARNING *** \n"
+    printf "Directory $CONFIG_PATH already exists, skipping.\n"
+    printf "Remove or rename it in order to introduce new settings.\n"
 fi
-cd arch_config
+
+cd CONFIG_PATH
 
 
-domain="https://github.com/mikbuch/mikbuch.github.io/blob/master/linux/files_linux/arch_config/"
+config_domain="https://raw.githubusercontent.com/mikbuch/arch_config/master"
+fileslist=$(curl -s $config_domain/files_list.txt)
+printf "\nList of configuration files: \n$fileslist\n\n"
 
-files="bashrc tmux.conf vimrc xinitrc Xresources"
+# Care for backup.
+BACKUP_DIR=$CONFIG_PATH/backup
+mkdir -p $BACKUP_DIR
+# Code for particular files.
+BACKUP_CODE=$(date "+%Y%m%d%H%M%S")
 
-
-
-backup_code=$(date "+%Y%m%d%H%M%S")
-echo $backup_code
-exit 0
-
-# Resolve files from the `files` list.
-for file in $files
+# Resolve files from the `fileslist`.
+for FILE in $fileslist
 do
-    ##############################################
-    #
-    #               BASHRC
-    #
-    if [[ $file == "bashrc" ]]; then
-        curl -O $domain$file
-        curl -O $domain"bash_profile"
+    # Download the file to the config directory.
+    curl -s -o $CONFIG_PATH/$FILE $config_domain/$FILE
 
-        # Backup ~/.bash_profile if exists.
-        if [[ -f ~/.bash_profile ]]; then
-            cp ~/.bash_profile ./bash_profile_$backup_code.bak
-        fi
-        echo "[[ -f ~/.bashrc ]] && . ~/.bashrc" > ~/.bash_profile
-
-        # Backup ~/.bashrc if exists.
-        if [[ -f ~/.bashrc ]]; then
-            cp ~/.bashrc ./bashrc_$backup_code.bak
-        fi
-
-        if [[ "$1" == "local" ]]; then
-
-            cp bashrc ~/.bashrc 
-            source ~/.bashrc
-        else
-            # Backup /etc/bash.bashrc if exists.
-            if [[ -f /etc/bash.bashrc ]]; then
-                cp /etc/bash.bashrc ./bash.bashrc_$backup_code.bak
-            fi
-
-            cp bashrc /etc/bash.bashrc 
-            echo "source /etc/bash.bashrc" > ~/.bashrc
-            source /etc/bash.bashrc
-        fi
     
-    ##############################################
-    #
-    #               TMUX.CONF
-    #
-    elif [[ $file == "tmux.conf" ]]; then
-        if [[ "$1" == "local" ]]; then
-            # Backup ~/.tmux.conf if exists.
-            if [[ -f ~/.tmux.conf ]]; then
-                cp ~/.tmux.conf ./tmux_conf_$backup_code.bak
-            fi
+    # BASHRC
+    if [[ $FILE == "bashrc" ]]; then
+        load_to_home_dir
+        # Source new settings.
+        source ~/.bashrc
+        printf " *** $FILE -- updated and resourced\n"
 
-            cp tmux_conf ~/.tmux.conf 
-            tmux source-file ~/.tmux.conf
-        else
-            # Backup /etc/tmux.conf if exists.
-            if [[ -f /etc/tmux.conf ]]; then
-                cp /etc/tmux.conf ./tmux_conf_$backup_code.bak
-            fi
+    # BASH_PROFILE
+    elif [[ $FILE == "bash_profile" ]]; then
+        load_to_home_dir
+        printf " *** $FILE -- updated\n"
+        # This contains only redirection to bashrc file.
 
-            cp tmux_conf /etc/tmux.conf 
-            tmux source-file /etc/tmux.conf
-        fi
+    # TMUX.CONF
+    elif [[ $FILE == "tmux.conf" ]]; then
+        load_to_home_dir
+        tmux source-file ~/.tmux.conf
+        printf " *** $FILE -- updated and resourced\n"
+
+    # XINITRC
+    elif [[ $FILE == "xinitrc" ]]; then
+        load_to_home_dir
+        printf " *** $FILE -- updated, restart Xorg session to see the results\n"
+
+    # XRESOURCES
+    elif [[ $FILE == "Xresources" ]]; then
+        load_to_home_dir
+        printf " *** $FILE -- updated, restart xterm to observe changes\n"
+
+    # VIMRC
+    elif [[ $FILE == "vimrc" ]]; then
+        load_to_home_dir
+        printf " *** $FILE -- updated, restart all vim windows to see changes\n"
     fi
 
-    ##############################################
-    #
-    #                 VIMRC
-    #
-    elif [[ $file == "vimrc" ]]; then
-        if [[ "$1" == "local" ]]; then
-            # Backup ~/.vimrc if exists.
-            if [[ -f ~/.vimrc ]]; then
-                cp ~/.vimrc ./vimrc_$backup_code.bak
-            fi
-
-            cp vimrc ~/.vimrc 
-        else
-            # Backup /etc/vimrc exists.
-            if [[ -f /etc/vimrc ]]; then
-                cp /etc/vimrc ./vimrc_$backup_code.bak
-            fi
-
-            cp vimrc /etc/vimrc 
-        fi
-    fi
-
-    ##############################################
-    #
-    #                 XINITRC
-    #
-
-    ##############################################
-    #
-    #                XRESOURCES
-    #
 done
+
+printf "\n\n"
+#EOF
