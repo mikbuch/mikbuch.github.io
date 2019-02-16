@@ -1,0 +1,36 @@
+name: Mikołaj Buchwald
+description: >
+    mikbuch
+about: >
+    PhD student at Adam Mickiewicz University in Poznań and Computer Systems
+    Analyst at Poznań Supercomputing and Networking Center
+master_repo: false
+url: "http://mikbuch.github.io"
+markdown: kramdown
+highlighter: rouge
+
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+
+paginate: 4
+
+logo:             logo.png
+disqus_shortname:
+
+rtl: false
+owner:
+  name:           mikbuch
+  avatar:         "https://avatars3.githubusercontent.com/u/10733514?s=400&u=289b804b29b3b8657c581311c8e77bd77af8c2b6&v=4"
+  email:          "mikolaj.buchwald@gmail.com"
+  # Social networking links used in footer. Update and remove as you like.
+  # twitter: mikbuch
+  github: https://github.com/cereberus
+  stackexchange: https://unix.stackexchange.com/users/258734/mikolaj-buchwald
+  # linkedin: https://www.linkedin.com/dummy_text
+  # For Google Authorship https://plus.google.com/authorship
+  # google_plus:
+
+# Analytics and webmaster tools stuff goes here
+# google_analytics:
+# google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+# bing_verify:
