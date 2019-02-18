@@ -69,5 +69,15 @@ source ~/.zshrc
 Now you can enjoy easier theme selection and plugin control for zsh.
 
 ***
-### Addendum
+### Appendix A
 Check out my .zshrc at this location: [https://gist.github.com/mikbuch/de96c3a65908f87288c102a0931fd43c](https://gist.github.com/mikbuch/de96c3a65908f87288c102a0931fd43c)
+
+### Appendix B
+
+The complete workflow for installing Zsh and Antigen bundles:
+```bash
+sudo apt install zsh
+zsh
+wget https://gist.githubusercontent.com/mikbuch/de96c3a65908f87288c102a0931fd43c/raw/5f476d339d19ed965bcfeddfe77def2d2ef08b78/.zshrc -o ~/.zshrc
+source ~/.zshrc
+```
