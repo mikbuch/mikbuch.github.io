@@ -78,6 +78,7 @@ The complete workflow for installing Zsh and Antigen bundles:
 ```bash
 sudo apt install zsh
 zsh
-wget https://gist.githubusercontent.com/mikbuch/de96c3a65908f87288c102a0931fd43c/raw/5f476d339d19ed965bcfeddfe77def2d2ef08b78/.zshrc -o ~/.zshrc
+cd
+wget "https://gist.githubusercontent.com/mikbuch/de96c3a65908f87288c102a0931fd43c/raw/5f476d339d19ed965bcfeddfe77def2d2ef08b78/.zshrc"
 source ~/.zshrc
 ```
