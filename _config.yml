@@ -9,7 +9,7 @@ url: "http://mikbuch.github.io"
 markdown: kramdown
 highlighter: rouge
 
-plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed', 'jekyll-last-modified-at']
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
 paginate: 4
 
