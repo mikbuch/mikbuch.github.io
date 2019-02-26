@@ -39,7 +39,7 @@ a img{ border:none; }
 
 body {
   font-family: "AvenirLTStd", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 14.5px;
+  font-size: 16.5px;
   color: #333;
   text-shadow: 0 1px 0 rgba(255,255,255,1.0);
 }
@@ -52,14 +52,14 @@ p {
 a.top-link {
   color: black;
   margin-top: 40px;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: none;
 }
 
 a.top-link:hover {
   margin-top: 40px;
-  color: black;
-  font-size: 40px;
+  color: #2382c8;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -78,13 +78,13 @@ a:hover {
 hr {
   margin: 20px 0 25px 0;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 30px;
   font-size: 20px;
   color: #ddd;
   border: none;
 }
 hr:before {
-  content: '\2022 \2022 \2022 \2022 \2022';
+  content: '\03A8 \03A8 \03A8 \03A8 \03A8';
 }
 
 .container {
@@ -143,6 +143,11 @@ ul.nav li a {
   margin-right: 10px;
   text-decoration: none;
   font-weight: lighter;
+}
+
+/* Nav bar (menu) hover */
+ul.nav li a:hover {
+  color: #2382c8;
 }
 
 ul.nav li.logo {
@@ -216,7 +221,7 @@ ul.nav li.logo a {
   color: #000;
 }
 .listing .post.other h2 a:hover {
-  color: deepskyblue;
+  color: #2382c8;
 }
 .listing .post.other p:last-child {
   margin-bottom: 0;
@@ -309,8 +314,8 @@ h3 {
   font-size: 17px;
   color: #333;
 }
-h3 a, h3 a:visited, h2 a, h2 a:visited{ color:#000; }
-h3 a:hover, h2 a:hover{ color:#000; border:none; }
+h3 a, h3 a:visited, h2 a, h2 a:visited{ color:#7c26cb; }
+h3 a:hover, h2 a:hover{ color:#2382c8; border:none; }
 
 h4 {
   font-size: 1em;
