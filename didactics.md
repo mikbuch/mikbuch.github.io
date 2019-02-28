@@ -44,7 +44,7 @@ title: Didactics
     * Morris, R. G. M., Garrud, P., Rawlins, J. N. P., & O’Keefe, J. (1982). Place navigation impaired in rats with hippocampal lesions. _Nature, 297_(5868), 681–683.
         * Pure science or _Rat medicine_?
 
-9. __Function lateralization__ (Wednesday, 24<sup>th</sup> April 2019)
+9. __Function lateralization__ (Wednesday, 24<sup>th</sup> of April 2019)
     * Verma, A., Van der Haegen, L., & Brysbaert, M. (2013). Symmetry detection in typically and atypically speech lateralized individuals: A visual half-field study. _Neuropsychologia, 51_(13), 2611-2619.
 
 10. __Neural plasticity__ (Wednesday, 8<sup>th</sup> of May 2019)
