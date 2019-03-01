@@ -7,7 +7,7 @@ title: Didactics
 
 ***
 
-## Behavioral and Cognitive Neuroscience (spring 2018/19)
+## Behavioral & Cognitive Neuroscience (spring 2018/19)
 &nbsp;
 
 1. __Introduction__ (Thursday, 25<sup>th</sup> of February 2019)
@@ -61,6 +61,23 @@ title: Didactics
 
 13. __Cultural mind__ (Wednesday, 29<sup>th</sup> of May 2019)
     * Abboud, S., Maidenbaum, S., Dehaene, S., & Amedi, A. (2015). A number-form area in the blind. _Nature communications, 6_.
+
+14. __Final classes__ (Wednesday, 5<sup>th</sup> of June 2019)
+    * Knowledge evaluation:
+        * 6 open-ended questions from the pool of 12 (one per subject).
+        * + 3 supplementary close-ended question concerning the methods of _behavioral & cognitive neuroscience_.
+
+Additional requirements for the course:
+1. Present a scientific paper in the groups of 2 (link for the registration will be available soon)
+
+2. Design your own experiment utilizing approaches from behavioral and/or cognitive neuroscience (individually):
+    * describe literature background of the study,
+    * state your research question and hypothesis,
+    * present experimental paradigm and data analysis methods,
+    * citations and bibliography should be formatted according to the APA guidelines,
+    * all of this should close in two A4 pages (including title, author and figures, bibliography may be on a separate page),
+    * present your idea during the classes (registration will be available under the same link as for paper presentation).
+
 
 ***
 
