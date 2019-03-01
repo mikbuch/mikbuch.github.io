@@ -40,3 +40,12 @@ In order to develop it locally use this command:
 ```bash
 bundle exec jekyll serve
 ```
+
+### Troubleshooting
+
+#### Packages vulnerabilities
+
+Update node packages:
+```bash
+sudo npm audit fix
+```
