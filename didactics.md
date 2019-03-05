@@ -68,21 +68,21 @@ title: Didactics
         * + 3 supplementary close-ended questions concerning the methods of _behavioral & cognitive neuroscience_.
 
 ## <a name="bcn_additional"></a>Additional requirements for the course [¶](#bcn_additional)
-1. Present a scientific paper in the groups of 2 ([link for the registration](https://docs.google.com/spreadsheets/d/1gaSPaw7EIVKZhgho7mWuR0rn0XeVcEpNsIC1axKhwRU/edit?usp=sharing))
+1. Present a scientific paper in the groups of 2 ([link for the registration](https://docs.google.com/spreadsheets/d/1gaSPaw7EIVKZhgho7mWuR0rn0XeVcEpNsIC1axKhwRU/edit?usp=sharing)).
 
 2. Design your own experiment utilizing approaches from behavioral and/or cognitive neuroscience (individually):
     * describe literature background of the study,
     * state your research question and hypothesis,
     * present experimental paradigm and data analysis methods,
     * citations and bibliography should be formatted according to the APA guidelines,
-    * all of this should close in two A4 pages (including title, author and figures, bibliography may be on a separate page),
-    * present your idea during the classes (registration is be available under the same link as for paper presentation).
+    * all of this should close in two A4 pages (including title, author and figures, bibliography may be on 3<sup>rd</sup> page),
+    * present and discuss your idea during classes (registration is available at the same link as for paper presentation).
 
 
 ***
 
 <center>
-<img src="/images/mind.jpg" width="300">
+<img src="/images/mind.jpg" width="350">
 </center>
 
 ***
