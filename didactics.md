@@ -18,6 +18,8 @@ title: Didactics
 
 2. __Addiction__ (Wednesday, 6<sup>th</sup> of March 2019)
     * Deroche-Gamonet, V., Belin, D., & Piazza, P. V. (2004). Evidence for addiction-like behavior in the rat. _Science, 305_(5686), 1014-1017.
+    * (Additional literature) Volkow, N. D., Koob, G. F., & McLellan, A. T. (2016). Neurobiologic Advances from the Brain Disease Model of Addiction. _New England Journal of Medicine, 374_(4), 363–371. [http://doi.org/10.1056/nejmra1511480](http://doi.org/10.1056/nejmra1511480)
+    * (Additional literature) Volkov, N. D., Wang, G.-J., Telang, F., Fowler, J. S., Logan, J., Childress, A.-R., … Christopher, W. (2006). Cocaine Cues and Dopamine in Dorsal Striatum: Mechanism of Craving in Cocaine Addiction. _Journal of Neuroscience, 26_(24), 6583–6588. [http://doi.org/10.1523/jneurosci.1544-06.2006](http://doi.org/10.1523/jneurosci.1544-06.2006)
         * Researcher's workshop: [Mendeley](http://mendeley.com/) and [Zotero](https://www.zotero.org/)
 
 3. __Appetite__ (Wednesday, 13<sup>th</sup> of March 2019)
