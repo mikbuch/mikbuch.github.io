@@ -7,15 +7,9 @@ tags: [zsh, antigen, oh-my-zsh, config]
 comments: false
 ---
 
-Today I was looking for a more efficient way of loading an oh-my-zsh theme --
-_clean_ ([https://github.com/BrandonRoehl/zsh-clean](https://github.com/BrandonRoehl/zsh-clean)). Until now I had to download
-the theme and manually install it in appropriate directory. While reading _clean_'s
-README, I stumbled upon Zsh Antigen ([https://github.com/zsh-users/antigen](https://github.com/zsh-users/antigen)).
+Today I was looking for a more efficient way of loading an oh-my-zsh theme -- _clean_ ([https://github.com/BrandonRoehl/zsh-clean](https://github.com/BrandonRoehl/zsh-clean)). Until now I had to download the theme and manually install it in appropriate directory. While reading _clean_'s README, I stumbled upon Zsh Antigen ([https://github.com/zsh-users/antigen](https://github.com/zsh-users/antigen)).
 
-Antigen is actually at the higher level than the mighty _oh-my-zsh_ as it allows
-managing oh-my-zsh, it's plugins and themes. Moreover, the author's manifesto
-in README seems both justified and ambitious. Anyway, by following _antigen_'s
-setup instruction you may easily install is:
+Antigen is actually at the higher level than the mighty _oh-my-zsh_ as it allows managing oh-my-zsh, it's plugins and themes. Moreover, the author's manifesto in README seems both justified and ambitious. Anyway, by following _antigen_'s setup instruction you may easily install is:
 
 ```bash
 curl -L git.io/antigen > ~/antigen.zsh
@@ -40,7 +34,7 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme clean
+antigen theme BrandonRoehl/zsh-clean
 
 # Tell Antigen that you're done.
 antigen apply
@@ -86,4 +80,4 @@ source ~/.zshrc
 
 ***
 
-Last modified on 19 Feb 2019
+Last modified on 11 Mar 2019

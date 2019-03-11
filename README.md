@@ -40,6 +40,7 @@ In order to develop it locally use this command:
 ```bash
 bundle exec jekyll serve
 ```
+Note: be sure to run it from the main project directory, not for example from "_posts".
 
 ### Troubleshooting
 
