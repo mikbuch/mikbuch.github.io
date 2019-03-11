@@ -34,7 +34,8 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme BrandonRoehl/zsh-clean
+antigen bundle BrandonRoehl/zsh-clean
+
 
 # Tell Antigen that you're done.
 antigen apply
