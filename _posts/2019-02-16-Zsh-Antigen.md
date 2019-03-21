@@ -9,14 +9,25 @@ comments: false
 
 Today I was looking for a more efficient way of loading an oh-my-zsh theme -- _clean_ ([https://github.com/BrandonRoehl/zsh-clean](https://github.com/BrandonRoehl/zsh-clean)). Until now I had to download the theme and manually install it in appropriate directory. While reading _clean_'s README, I stumbled upon Zsh Antigen ([https://github.com/zsh-users/antigen](https://github.com/zsh-users/antigen)).
 
+### Prerequisites
+Install zsh:
+```bash
+sudo apt-get install zsh
+```
+
+### About Antigen
 Antigen is actually at the higher level than the mighty _oh-my-zsh_ as it allows managing oh-my-zsh, it's plugins and themes. Moreover, the author's manifesto in README seems both justified and ambitious. Anyway, by following _antigen_'s setup instruction you may easily install is:
 
 ```bash
 curl -L git.io/antigen > ~/antigen.zsh
 ```
 
-Then setting up the zsh is as simple as putting few lines in your `~/.zshrc` file:
+Then setting up the zsh is as simple as putting few lines in your `~/.zshrc` file, so edit it with:
+```bash
+vim ~/.zshrc
+```
 
+And paste the following lines:
 ```bash
 source ~/antigen.zsh
 
@@ -41,7 +52,12 @@ antigen bundle BrandonRoehl/zsh-clean
 antigen apply
 ```
 
-Pay particular attention to these two lines:
+Now run your zsh:
+```bash
+zsh
+```
+
+These two lines are of particular interest:
 
 ```bash
 ...
@@ -72,13 +88,10 @@ Check out my .zshrc at this location: [https://gist.github.com/mikbuch/de96c3a65
 The complete workflow for installing Zsh and Antigen bundles:
 ```bash
 sudo apt install zsh
-chsh -s $(which zsh)
+wget "https://gist.githubusercontent.com/mikbuch/de96c3a65908f87288c102a0931fd43c/raw/5f476d339d19ed965bcfeddfe77def2d2ef08b78/.zshrc" -o ~/.zshrc
 zsh
-cd
-wget "https://gist.githubusercontent.com/mikbuch/de96c3a65908f87288c102a0931fd43c/raw/5f476d339d19ed965bcfeddfe77def2d2ef08b78/.zshrc"
-source ~/.zshrc
 ```
 
 ***
 
-Last modified on 11 Mar 2019
+Last modified on 21 Mar 2019
