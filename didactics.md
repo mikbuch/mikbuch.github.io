@@ -24,15 +24,13 @@ title: Didactics
 
 3. __Appetite__ (Wednesday, 13<sup>th</sup> of March 2019)
     * Avena, N. M., Rada, P., Moise, N., & Hoebel, B. G. (2006). Sucrose sham feeding on a binge schedule releases accumbens dopamine repeatedly and eliminates the acetylcholine satiety response. _Neuroscience, 139_(3), 813-820.
-        * Useful information: _computer hardware and operating systems_ (Black-box insides, dual-booting, Mac OSX vs. Linux, etc.)
 
 4. __Sleep__ (Wednesday, 20<sup>th</sup> of March 2019)
     * Aeschbach, D., Cutler, A. J., & Ronda, J. M. (2008). A role for non-rapid-eye-movement sleep homeostasis in perceptual learning. _The Journal of Neuroscience, 28_(11), 2766-2772.
-        * Scientific reliability/validity: [Scopus](https://en.wikipedia.org/wiki/Scopus) ([Scimago](https://www.scimagojr.com/)) and [Web of Science](https://en.wikipedia.org/wiki/Web_of_Science)
 
 5. __Learning and memory__ (Wednesday, 27<sup>th</sup> of March 2019)
     * Knowlton, B. J., Ramus, S. J., & Squire, L. R. (1992). Intact artificial grammar learning in amnesia: Dissociation of classification learning and explicit memory for specific instances. _Psychological Science, 3_(3), 172-179.
-        * Explanation vs. verification
+        * Scientific reliability/validity: [Scopus](https://en.wikipedia.org/wiki/Scopus) ([Scimago](https://www.scimagojr.com/)) and [Web of Science](https://en.wikipedia.org/wiki/Web_of_Science)
 
 6. __Cognitive control__ (Wednesday, 3<sup>rd</sup> of April 2019)
     * Anguera, J. A., Boccanfuso, J., Rintoul, J. L., Al-Hashimi, O., Faraji, F., Janowich, J., Kong, E., Larraburo, Y., Rolle, C., Johnston, E., & Gazzaley, A. (2013). Video game training enhances cognitive control in older adults. _Nature, 501_(7465), 97-101
@@ -51,9 +49,11 @@ title: Didactics
 
 10. __Neural plasticity__ (Wednesday, 15<sup>th</sup> of May 2019)
     * Siuda-Krzywicka, K., Bola, Ł., Paplińska, M., Sumera, E., Jednoróg, K., Marchewka, A., Śliwińska, M., Amedi, A., Szwed, M. (2016) Massive cortical reorganization in sighted Braille readers. _eLife, 5_, e10762.  
+        * Explanation vs. verification
 
 11. __Psychological disorders__ (Wednesday, 22th of May 2019)
     * Holmes, A. J., & Pizzagalli, D. A. (2008). Spatiotemporal dynamics of error processing dysfunctions in major depressive disorder. _Archives of General Psychiatry, 65_(2), 179-188.
+        * Useful information: _computer hardware and operating systems_ (Black-box insides, dual-booting, Mac OSX vs. Linux, etc.)
 
 12. __Love and desire__ (Wednesday, 29<sup>nd</sup> of May 2019)
     * Lester, G. L., & Gorzalka, B. B. (1988). Effect of novel and familiar mating partners on the duration of sexual receptivity in the female hamster. _Behavioral and neural biology, 49_(3), 398-405.
