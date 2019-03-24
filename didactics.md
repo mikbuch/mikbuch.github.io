@@ -16,7 +16,7 @@ title: Didactics
     * (Additional literature) Page, M. P. (2006). What can't functional neuroimaging tell the cognitive psychologist?. _Cortex, 42(3)_, 428-443.
         * Pure vs. applied science
 
-2. __Addiction__ (Wednesday, 6<sup>th</sup> of March 2019)
+2. __Binge__ (Wednesday, 6<sup>th</sup> of March 2019)
     * Deroche-Gamonet, V., Belin, D., & Piazza, P. V. (2004). Evidence for addiction-like behavior in the rat. _Science, 305_(5686), 1014-1017.
     * (Additional literature) Volkow, N. D., Koob, G. F., & McLellan, A. T. (2016). Neurobiologic Advances from the Brain Disease Model of Addiction. _New England Journal of Medicine, 374_(4), 363–371. [http://doi.org/10.1056/nejmra1511480](http://doi.org/10.1056/nejmra1511480)
     * (Additional literature) Volkov, N. D., Wang, G.-J., Telang, F., Fowler, J. S., Logan, J., Childress, A.-R., … Christopher, W. (2006). Cocaine Cues and Dopamine in Dorsal Striatum: Mechanism of Craving in Cocaine Addiction. _Journal of Neuroscience, 26_(24), 6583–6588. [http://doi.org/10.1523/jneurosci.1544-06.2006](http://doi.org/10.1523/jneurosci.1544-06.2006)
@@ -38,33 +38,33 @@ title: Didactics
     * Anguera, J. A., Boccanfuso, J., Rintoul, J. L., Al-Hashimi, O., Faraji, F., Janowich, J., Kong, E., Larraburo, Y., Rolle, C., Johnston, E., & Gazzaley, A. (2013). Video game training enhances cognitive control in older adults. _Nature, 501_(7465), 97-101
         * Scientific programming: Python and R
 
-7. __Action control__ (Wednesday, 10<sup>th</sup> of April 2019)
+7. __Action control__ (Wednesday, 17<sup>th</sup> of April 2019)
     * Króliczak, G., McAdam, T. D., Quinlan, D. J., & Culham, J. C. (2008). The human dorsal stream adapts to real actions and 3D shape processing: a functional magnetic resonance imaging study. _Journal of neurophysiology, 100_(5), 2627-2639.
         * Python environments: [Atom](https://atom.io/), [JupyterLab](https://github.com/jupyterlab/jupyterlab), [PyCharm](https://www.jetbrains.com/pycharm/)
 
-8. __Spatial orientation__ (Wednesday, 17<sup>th</sup> of April 2019)
+8. __Spatial orientation__ (Wednesday, 24<sup>th</sup> of April 2019)
     * Morris, R. G. M., Garrud, P., Rawlins, J. N. P., & O’Keefe, J. (1982). Place navigation impaired in rats with hippocampal lesions. _Nature, 297_(5868), 681–683.
         * Pure science or _rat medicine_?
 
-9. __Function lateralization__ (Wednesday, 24<sup>th</sup> of April 2019)
+9. __Function lateralization__ (Wednesday, 8<sup>th</sup> of May 2019)
     * Verma, A., Van der Haegen, L., & Brysbaert, M. (2013). Symmetry detection in typically and atypically speech lateralized individuals: A visual half-field study. _Neuropsychologia, 51_(13), 2611-2619.
 
-10. __Neural plasticity__ (Wednesday, 8<sup>th</sup> of May 2019)
+10. __Neural plasticity__ (Wednesday, 15<sup>th</sup> of May 2019)
     * Siuda-Krzywicka, K., Bola, Ł., Paplińska, M., Sumera, E., Jednoróg, K., Marchewka, A., Śliwińska, M., Amedi, A., Szwed, M. (2016) Massive cortical reorganization in sighted Braille readers. _eLife, 5_, e10762.  
 
-11. __Psychological disorders__ (Wednesday, 15th of May 2019)
+11. __Psychological disorders__ (Wednesday, 22th of May 2019)
     * Holmes, A. J., & Pizzagalli, D. A. (2008). Spatiotemporal dynamics of error processing dysfunctions in major depressive disorder. _Archives of General Psychiatry, 65_(2), 179-188.
 
-12. __Love and desire__ (Wednesday, 22<sup>nd</sup> of May 2019)
+12. __Love and desire__ (Wednesday, 29<sup>nd</sup> of May 2019)
     * Lester, G. L., & Gorzalka, B. B. (1988). Effect of novel and familiar mating partners on the duration of sexual receptivity in the female hamster. _Behavioral and neural biology, 49_(3), 398-405.
     * Bartels, A., & Zeki, S. (2004). The neural correlates of maternal and romantic love. _Neuroimage, 21_(3), 1155-1166.
         * _Predatory journals_
 
-13. __Cultural mind__ (Wednesday, 29<sup>th</sup> of May 2019)
+13. __Cultural mind__ (Wednesday, 5<sup>th</sup> of June 2019)
     * Abboud, S., Maidenbaum, S., Dehaene, S., & Amedi, A. (2015). A number-form area in the blind. _Nature communications, 6_.
         * Useful information regarding social sciences
 
-14. __Final classes__ (Wednesday, 5<sup>th</sup> of June 2019)
+14. __Final classes__ (Wednesday, 12<sup>th</sup> of June 2019)
     * Knowledge evaluation:
         * 6 open-ended questions from the pool of 12 (one per subject).
         * + 3 supplementary close-ended questions concerning the methods of _behavioral & cognitive neuroscience_.
