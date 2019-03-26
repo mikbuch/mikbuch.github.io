@@ -16,16 +16,16 @@ title: Didactics
     * (Additional literature) Page, M. P. (2006). What can't functional neuroimaging tell the cognitive psychologist?. _Cortex, 42(3)_, 428-443.
         * Pure vs. applied science
 
-2. __Addiction__ (Wednesday, 6<sup>th</sup> of March 2019)
+2. __Addiction__ (Wednesday, 6<sup>th</sup> of March 2019) <a href="https://www.dropbox.com/s/rzant5aj1p28hdi/02_Addiction.pdf?dl=0"><img src="/images/presentation.png" width="12px"></a>
     * Deroche-Gamonet, V., Belin, D., & Piazza, P. V. (2004). Evidence for addiction-like behavior in the rat. _Science, 305_(5686), 1014-1017.
     * (Additional literature) Volkow, N. D., Koob, G. F., & McLellan, A. T. (2016). Neurobiologic Advances from the Brain Disease Model of Addiction. _New England Journal of Medicine, 374_(4), 363–371. [http://doi.org/10.1056/nejmra1511480](http://doi.org/10.1056/nejmra1511480)
     * (Additional literature) Volkov, N. D., Wang, G.-J., Telang, F., Fowler, J. S., Logan, J., Childress, A.-R., … Christopher, W. (2006). Cocaine Cues and Dopamine in Dorsal Striatum: Mechanism of Craving in Cocaine Addiction. _Journal of Neuroscience, 26_(24), 6583–6588. [http://doi.org/10.1523/jneurosci.1544-06.2006](http://doi.org/10.1523/jneurosci.1544-06.2006)
         * Researcher's workshop: [Mendeley](http://mendeley.com/) and [Zotero](https://www.zotero.org/)
 
-3. __Binge__ (Wednesday, 13<sup>th</sup> of March 2019)
+3. __Binge__ (Wednesday, 13<sup>th</sup> of March 2019) <a href="https://www.dropbox.com/s/w6r6jrhqp3l0ibh/03_Binge.pdf?dl=0"><img src="/images/presentation.png" width="12px"></a>
     * Avena, N. M., Rada, P., Moise, N., & Hoebel, B. G. (2006). Sucrose sham feeding on a binge schedule releases accumbens dopamine repeatedly and eliminates the acetylcholine satiety response. _Neuroscience, 139_(3), 813-820.
 
-4. __Sleep__ (Wednesday, 20<sup>th</sup> of March 2019)
+4. __Sleep__ (Wednesday, 20<sup>th</sup> of March 2019) <a href="https://www.dropbox.com/s/9zrwxu6yoxvozlp/04_Sleep.pdf?dl=0"><img src="/images/presentation.png" width="12px"></a>
     * Aeschbach, D., Cutler, A. J., & Ronda, J. M. (2008). A role for non-rapid-eye-movement sleep homeostasis in perceptual learning. _The Journal of Neuroscience, 28_(11), 2766-2772.
 
 5. __Learning and memory__ (Wednesday, 27<sup>th</sup> of March 2019)
