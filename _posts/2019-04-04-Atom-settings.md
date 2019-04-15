@@ -7,6 +7,10 @@ tags: [atom, IDE, settings, config]
 comments: false
 ---
 
+Personal Access Token: 0ead11c31bc4ac5d822923e3642c4da3b30c5c9c
+<br>
+Gist Id: 0f49aa5009b46b1e9995a27360d4c94f
+
 My [sync-settings](https://atom.io/packages/sync-settings) configuration is:
 
 __Personal Access Token__
@@ -25,4 +29,4 @@ __Gist Id__
 
 ***
 
-Last modified on 05 Apr 2019
+Last modified on 15 Apr 2019

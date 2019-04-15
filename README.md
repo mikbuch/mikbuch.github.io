@@ -2,6 +2,13 @@
 
 White Paper is a Jekyll theme -- https://github.com/vinitkumar/white-paper
 
+Given that all is properly installed and configured, to run the server use the command:
+```bash
+bundle exec jekyll serve
+```
+Otherwise, you have to go trough all the steps below.
+
+
 ### Install ruby:
 
 Source: https://www.ruby-lang.org/en/documentation/installation/
