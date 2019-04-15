@@ -38,6 +38,7 @@ title: Didactics
 
 7. __Action control__ (Wednesday, 17<sup>th</sup> of April 2019)
     * Króliczak, G., McAdam, T. D., Quinlan, D. J., & Culham, J. C. (2008). The human dorsal stream adapts to real actions and 3D shape processing: a functional magnetic resonance imaging study. _Journal of neurophysiology, 100_(5), 2627-2639.
+    * (Additional literature) Norman, K. A., Polyn, S. M., Detre, G. J., & Haxby, J. V. (2006). Beyond mind-reading: multi-voxel pattern analysis of fMRI data. _Trends in Cognitive Sciences, 10_(9), 424–430. https://doi.org/10.1016/j.tics.2006.07.005
         * Python environments: [Atom](https://atom.io/), [JupyterLab](https://github.com/jupyterlab/jupyterlab), [PyCharm](https://www.jetbrains.com/pycharm/)
 
 8. __Spatial orientation__ (Wednesday, 24<sup>th</sup> of April 2019)
