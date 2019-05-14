@@ -41,18 +41,18 @@ title: Didactics
     * (Additional literature) Norman, K. A., Polyn, S. M., Detre, G. J., & Haxby, J. V. (2006). Beyond mind-reading: multi-voxel pattern analysis of fMRI data. _Trends in Cognitive Sciences, 10_(9), 424–430. https://doi.org/10.1016/j.tics.2006.07.005
         * Python environments: [Atom](https://atom.io/), [JupyterLab](https://github.com/jupyterlab/jupyterlab), [PyCharm](https://www.jetbrains.com/pycharm/)
 
-8. __Spatial orientation__ (Wednesday, 25<sup>th</sup> of April 2019 -- postponed to 26<sup>th</sup> of April)
+8. __Spatial orientation__ (Thursday, 26<sup>th</sup> of April 2019 -- postponed from Wednesday, 25<sup>th</sup> of April 2019)
     * Morris, R. G. M., Garrud, P., Rawlins, J. N. P., & O’Keefe, J. (1982). Place navigation impaired in rats with hippocampal lesions. _Nature, 297_(5868), 681–683.
         * Pure science or _rat medicine_?
 
-9. __Function lateralization__ (Wednesday, 8<sup>th</sup> of May 2019 -- postponed)
+9. __Function lateralization__ (Thursday, 16<sup>th</sup> of May 2019 -- postponed from Wednesday, 8<sup>th</sup> of May)
     * Verma, A., Van der Haegen, L., & Brysbaert, M. (2013). Symmetry detection in typically and atypically speech lateralized individuals: A visual half-field study. _Neuropsychologia, 51_(13), 2611-2619.
 
-10. __Neural plasticity__ (Wednesday, 15<sup>th</sup> of May 2019)
+10. __Neural plasticity__ (Wednesday, 22<sup>nd</sup> of May 2019 -- postponed from Wednesday, 15<sup>th</sup> of May)
     * Siuda-Krzywicka, K., Bola, Ł., Paplińska, M., Sumera, E., Jednoróg, K., Marchewka, A., Śliwińska, M., Amedi, A., Szwed, M. (2016) Massive cortical reorganization in sighted Braille readers. _eLife, 5_, e10762.  
         * Explanation vs. verification
 
-11. __Psychological disorders__ (Wednesday, 22<sup>nd</sup> of May 2019)
+11. __Psychological disorders__ (Thursday, 23<sup>rd</sup> of May 2019 -- postponed from Wednesday, 22<sup>nd</sup> of May)
     * Holmes, A. J., & Pizzagalli, D. A. (2008). Spatiotemporal dynamics of error processing dysfunctions in major depressive disorder. _Archives of General Psychiatry, 65_(2), 179-188.
         * Useful information: _computer hardware and operating systems_ (Black-box insides, dual-booting, Mac OSX vs. Linux, etc.)
 
