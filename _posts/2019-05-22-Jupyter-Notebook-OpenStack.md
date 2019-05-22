@@ -27,7 +27,7 @@ General steps:
 ## Install and configure Apache server (for proxy)
 
 Prepare the configuration file at `/etc/apache2/sites-available/jupyter.conf` with the following settings:
-```xml
+```apache
 Listen 443
 <VirtualHost *:443>
 
@@ -94,6 +94,15 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.password = u'sha1:bcd259ccf...<your hashed password here>'
 c.NotebookApp.trust_xheaders = True
 ```
+
+***
+
+### Sources
+
+ * [Official documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-lets-encrypt)
+ * [Jupyter and Apache](https://www.linode.com/docs/applications/big-data/install-a-jupyter-notebook-server-on-a-linode-behind-an-apache-reverse-proxy/)
+ * [Working Apache configuration](https://stackoverflow.com/a/28819231/8877692)
+ * [Generate password with Ipython](https://github.com/paderijk/jupyter-password/blob/master/jupyter-password.py)
 
 ***
 
