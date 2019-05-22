@@ -45,30 +45,35 @@ title: Didactics
     * Morris, R. G. M., Garrud, P., Rawlins, J. N. P., & O’Keefe, J. (1982). Place navigation impaired in rats with hippocampal lesions. _Nature, 297_(5868), 681–683.
         * Pure science or _rat medicine_?
 
-9. __Function lateralization__ (Thursday, 16<sup>th</sup> of May 2019 -- postponed from Wednesday, 8<sup>th</sup> of May)
+9. _presentations_ (Thursday, 16<sup>th</sup> of May 2019 -- postponed from Wednesday, 8<sup>th</sup> of May)
+    * no article during this classes
+
+10. __Function lateralization__ (Wednesday, 22<sup>nd</sup> of May 2019 -- postponed from Wednesday, 15<sup>th</sup> of May)
     * Verma, A., Van der Haegen, L., & Brysbaert, M. (2013). Symmetry detection in typically and atypically speech lateralized individuals: A visual half-field study. _Neuropsychologia, 51_(13), 2611-2619.
 
-10. __Neural plasticity__ (Wednesday, 22<sup>nd</sup> of May 2019 -- postponed from Wednesday, 15<sup>th</sup> of May)
+11. __Neural plasticity__ (Thursday, 23<sup>rd</sup> of May 2019 -- postponed from Wednesday, 22<sup>nd</sup> of May)
     * Siuda-Krzywicka, K., Bola, Ł., Paplińska, M., Sumera, E., Jednoróg, K., Marchewka, A., Śliwińska, M., Amedi, A., Szwed, M. (2016) Massive cortical reorganization in sighted Braille readers. _eLife, 5_, e10762.  
         * Explanation vs. verification
 
-11. __Psychological disorders__ (Thursday, 23<sup>rd</sup> of May 2019 -- postponed from Wednesday, 22<sup>nd</sup> of May)
+12. __Psychological disorders__ (Wednesday, 29<sup>th</sup> of May 2019)
     * Holmes, A. J., & Pizzagalli, D. A. (2008). Spatiotemporal dynamics of error processing dysfunctions in major depressive disorder. _Archives of General Psychiatry, 65_(2), 179-188.
         * Useful information: _computer hardware and operating systems_ (Black-box insides, dual-booting, Mac OSX vs. Linux, etc.)
 
-12. __Love and desire__ (Wednesday, 29<sup>th</sup> of May 2019)
+13. __Love and desire__ (Wednesday, 5<sup>th</sup> of June 2019)
     * Lester, G. L., & Gorzalka, B. B. (1988). Effect of novel and familiar mating partners on the duration of sexual receptivity in the female hamster. _Behavioral and neural biology, 49_(3), 398-405.
     * Bartels, A., & Zeki, S. (2004). The neural correlates of maternal and romantic love. _Neuroimage, 21_(3), 1155-1166.
         * _Predatory journals_
-
-13. __Cultural mind__ (Wednesday, 5<sup>th</sup> of June 2019)
-    * Abboud, S., Maidenbaum, S., Dehaene, S., & Amedi, A. (2015). A number-form area in the blind. _Nature communications, 6_.
-        * Useful information regarding social sciences
 
 14. __Final classes__ (Wednesday, 12<sup>th</sup> of June 2019)
     * Knowledge evaluation:
         * 6 open-ended questions from the pool of 12 (one per subject).
         * + 3 supplementary close-ended questions concerning the methods of _behavioral & cognitive neuroscience_.
+
+<!-- Removed.
+13. __Cultural mind__ (Wednesday, 5<sup>th</sup> of June 2019)
+    * Abboud, S., Maidenbaum, S., Dehaene, S., & Amedi, A. (2015). A number-form area in the blind. _Nature communications, 6_.
+        * Useful information regarding social sciences -->
+
 
 ## <a name="bcn_additional"></a>Additional requirements for the course [¶](#bcn_additional)
 1. Present a scientific paper in the groups of 2 ([link for the registration](https://docs.google.com/spreadsheets/d/1gaSPaw7EIVKZhgho7mWuR0rn0XeVcEpNsIC1axKhwRU/edit?usp=sharing)).
