@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jupyter Notebook environment"
+title: "Jupyter for Computational Neuroscience"
 description: "This guide will walk you trough working with Jupyter Notebook environment (pipenv)"
 category: articles
 tags: [python, jupyter, pipenv, ipython notebook]
