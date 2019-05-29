@@ -77,7 +77,7 @@ sudo adduser aeneas
 ```
 Note: do not append this user to sudoers group.
 
-Create password and hash it:
+Create password and hash it ([source](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#preparing-a-hashed-password)):
 ```python
 In [1]: from notebook.auth import passwd
 In [2]: passwd()
