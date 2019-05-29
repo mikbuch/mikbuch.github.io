@@ -77,6 +77,12 @@ sudo adduser aeneas
 ```
 Note: do not append this user to sudoers group.
 
+Create password and hash it:
+```python
+In [1]: from notebook.auth import passwd
+In [2]: passwd()
+```
+
 Create Jupyter Notebook configuration file at `~/.jupyter/jupyter_notebook_config.py`:
 ```bash
 vim ~/.jupyter/jupyter_notebook_config.py
