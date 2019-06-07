@@ -66,7 +66,7 @@ title: Didactics
 
 14. __Final classes__ (Wednesday, 12<sup>th</sup> of June 2019)
     * Knowledge evaluation:
-        * 6 open-ended questions from the pool of 12 (one per subject).
+        * 5 open-ended questions from the pool of 10 subjects: _2. Addiction_, _3. Binge_, _4. Sleep_, _5. Learning and memory_, _6. Cognitive control_, _7. Action control_, _8. Spatial orientation_, _10. Function lateralization_, _11. Neural plasticity_, _13. Love and desire_ (tylko Lester & Gorzalka).
         * + 3 supplementary close-ended questions concerning the methods of _behavioral & cognitive neuroscience_.
 
 <!-- Removed.
