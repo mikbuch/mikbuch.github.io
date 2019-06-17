@@ -7,7 +7,7 @@ tags: [Jupyter Notebook, OpenStack, Apache, config]
 comments: false
 ---
 
-Creating an instance of a virtual machine on OpenStack that will host Jupyter Notebook server proxied trough Apache server.
+Creating an instance of a virtual machine on OpenStack that will host Jupyter Notebook server proxied trough an Apache server.
 
 # How to setup Jupyter Notebook server on OpenStack
 
@@ -16,7 +16,7 @@ This tutorial will guide you trough configuration of an externally-accessible (t
 General steps:
 1. Setup instance and network on OpenStack
 2. Configure SSH connection
-3. Install and configure apache server (for proxy)
+3. Install and configure Apache server (for proxy)
 4. Install and configure Jupyter Notebook server
 
 
@@ -25,6 +25,8 @@ General steps:
 ## Configure SSH connection
 
 ## Install and configure Apache server (for proxy)
+
+Create self-signed certificates.
 
 Prepare the configuration file at `/etc/apache2/sites-available/jupyter.conf` with the following settings:
 ```apache
