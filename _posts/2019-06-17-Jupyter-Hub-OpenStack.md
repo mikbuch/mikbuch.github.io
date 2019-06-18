@@ -113,8 +113,19 @@ a2enmod ssl rewrite proxy proxy_http proxy_wstunnel
 sudo systemctl restart apache2
 ```
 
-Create self-signed certificate and configure apache.
+In order to generate a self-signed certificate type in the following commands ((source for `openssl` key generation))[https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication]:
+```bash
+mkdir ~/.certs
+cd ~/.certs
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+```
+
+Enable site and restart the server
+```bash
+sudo a2ensite jupyter.conf
+sudo service apache2 restart
+```
 
 ***
 
-Last modified on 17 June 2019
+Last modified on 18 June 2019

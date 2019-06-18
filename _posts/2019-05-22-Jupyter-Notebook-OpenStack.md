@@ -16,13 +16,23 @@ This tutorial will guide you trough configuration of an externally-accessible (t
 General steps:
 1. Setup instance and network on OpenStack
 2. Configure SSH connection
-3. Install and configure Apache server (for proxy)
-4. Install and configure Jupyter Notebook server
+3. SSL certificate
+4. Install and configure Apache server (for proxy)
+5. Install and configure Jupyter Notebook server
 
 
 ## Setup instance and network on OpenStack
 
 ## Configure SSH connection
+
+## SSL Certificate
+
+In order to generate a self-signed certificate type in the following commands ((source for `openssl` key generation))[https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication]:
+```bash
+mkdir ~/.certs
+cd ~/.certs
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+```
 
 ## Install and configure Apache server (for proxy)
 
@@ -71,6 +81,13 @@ Listen 443
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
+Enable site and restart the server
+```bash
+sudo a2ensite jupyter.conf
+sudo service apache2 restart
+```
+
+
 ## Install and configure Jupyter Notebook server
 
 Jupyter has to be run on a non-sudo user. Hence, create a new user, e.g.:
@@ -114,4 +131,4 @@ c.NotebookApp.trust_xheaders = True
 
 ***
 
-Last modified on 22 May 2019
+Last modified on 16 June 2019
