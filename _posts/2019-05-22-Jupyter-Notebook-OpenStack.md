@@ -122,6 +122,21 @@ c.NotebookApp.trust_xheaders = True
 
 ***
 
+In order to debug the notebook, running on port 80 as root, use the following config:
+```python
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.allow_remote_access = True
+c.NotebookApp.base_url = '/jupyter'
+c.NotebookApp.certfile = '/etc/certs/mycert.pem'
+c.NotebookApp.keyfile = '/etc/certs/mykey.key'
+c.NotebookApp.ip = 'localhost'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = u'sha1:9696<some_password>'
+c.NotebookApp.trust_xheaders = True
+```
+
+***
+
 ### Sources
 
  * [Official documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-lets-encrypt)
