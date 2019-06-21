@@ -13,17 +13,23 @@ Creating an instance of a virtual machine on OpenStack that will host Jupyter No
 
 This tutorial will guide you trough configuration of an externally-accessible (trough Internet) Jupyter Notebook server.
 
-General steps:
-1. Setup instance and network on OpenStack
-2. Configure SSH connection
-3. SSL certificate
-4. Install and configure Apache server (for proxy)
-5. Install and configure Jupyter Notebook server
+Steps:
+1. [Setup instance and network on OpenStack](#setup-instance-and-network-on-openstack)
+2. [Configure SSH connection](#configure-ssh-connection)
+3. [SSL certificate](#ssl-certificate)
+4. [Install and configure Apache server](#install-and-configure-apache-server)
+5. [Install and configure Jupyter Notebook server](#install-and-configure-jupyter-notebook-server)
 
 
 ## Setup instance and network on OpenStack
 
+Remember to open port 443 on your OpenStack Instance, then `Soft Reboot` the instance
+
+
 ## Configure SSH connection
+
+Remember to open port 443 on your OpenStack Instance, then `Soft Reboot` the instance
+
 
 ## SSL Certificate
 
@@ -34,9 +40,11 @@ cd ~/.certs
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
 
-## Install and configure Apache server (for proxy)
+## Install and configure Apache server
 
-Create self-signed certificates.
+This step is required in order to proxy your server (no need of running Jupyter Notebook as root).
+
+Make sure that self-signed certificates were generated (see previous step).
 
 Prepare the configuration file at `/etc/apache2/sites-available/jupyter.conf` with the following settings:
 ```apache
