@@ -78,7 +78,7 @@ Install `sudospawner`:
 sudo python3 -m pip install sudospawner
 ```
 
-Use `visudo` to edit `/etc/sudoers`. You should have his in your `sudoers` file [source](https://github.com/jupyterhub/jupyterhub/wiki/Using-sudo-to-run-JupyterHub-without-root-privileges):
+Use `visudo` to edit `/etc/sudoers`. You should have his in your `sudoers` file ([source](https://github.com/jupyterhub/jupyterhub/wiki/Using-sudo-to-run-JupyterHub-without-root-privileges)):
 ```bash
 # Cmnd alias specification
 
