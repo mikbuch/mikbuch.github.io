@@ -95,9 +95,15 @@ root    ALL=(ALL:ALL) ALL
 cicero ALL=(%jupyterhub) NOPASSWD:JUPYTER_CMD
 ```
 
-Add user to shadow groups:
+Add user to `shadow` and `jupyterhub` groups:
 ```bash
 sudo usermod -a -G shadow cicero
+sudo usermod -a -G jupyterhub cicero
+```
+
+Logout and login or restart the machine
+```bash
+sudo shutdown -r 0
 ```
 
 Make a Directory for JupyterHub
