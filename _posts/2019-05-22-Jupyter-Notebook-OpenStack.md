@@ -89,6 +89,8 @@ Listen 443
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
+__Note:__ Both: apache and Jupyter notebook have to have SSL certificates set, and it have to be the same certificates.
+
 Enable site and restart the server
 ```bash
 sudo a2ensite jupyter.conf
@@ -154,4 +156,4 @@ c.NotebookApp.trust_xheaders = True
 
 ***
 
-Last modified on 16 June 2019
+Last modified on 28 June 2019
