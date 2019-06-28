@@ -132,6 +132,8 @@ sudo a2ensite jupyter.conf
 sudo service apache2 restart
 ```
 
+__Note__: In order for the Jupyterhub to work correctly, hou have to remove/rename/backup any existing (conflicting) Jupyter Notebook configuration at ~/.jupyter/jupyter_notebook_config.py
+
 ***
 
-Last modified on 23 June 2019
+Last modified on 28 June 2019
