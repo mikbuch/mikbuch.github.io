@@ -23,7 +23,7 @@ ArchLinux
 sudo pacman -S ruby
 ```
 
-OSX:
+macOS:
 ```bash
 brew install ruby
 ```
@@ -36,10 +36,12 @@ gem install jekyll bundler --user-install
 bundle install
 ```
 
-Add ditectory with local gems to PATH (in )~/.bashrc or ~/.zshrc):
+Add ditectory with local gems to PATH (in ~/.bashrc or ~/.zshrc):
 ```bash
-echo ' export PATH=/Users/Bacchus/.gem/ruby/2.3.0/bin:$PATH' >> ~/.zshrc
+echo 'export PATH=/Users/$USER/.gem/ruby/2.3.0/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
 ```
+where `$USER` is your user name for which bundle[r] was installed. 
 
 ### Run server
 
