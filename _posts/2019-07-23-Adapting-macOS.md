@@ -33,6 +33,26 @@ The way to fix that is to add `Simple Modification` in Karabiner:
 `right_command` -> `right_option`
 ![2019-07-23-Adapting-macOS_04-Karabiner-Logitech-K850](/images/2019-07-23-Adapting-macOS_04-Karabiner-Logitech-K850.png)
 
+# Homebrew (brew) for multiple users
+
+Instructions ([source](https://medium.com/@leifhanack/homebrew-multi-user-setup-e10cb5849d59)):
+ 1. Add `brew` group, add users to this group, validate with:
+ ```bash
+ groups $USER
+ ```
+ 2. Change group of Homebrew directory
+ ```bash
+ sudo chgrp -R brew /usr/local/Homebrew
+ ```
+ 3. Allow group to write inside of Homebrew directory
+ ```bash
+ sudo chmod -R g+w /usr/local/Homebrew
+ ```
+ 4. Check if you can use Homebrew:
+ ```bash
+ brew doctor
+ ```
+
 ***
 
-Last modified on 23 July 2019
+Last modified on 25 July 2019
