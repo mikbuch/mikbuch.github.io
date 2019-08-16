@@ -7,7 +7,7 @@ title: Didactics
 
 ***
 
-## <a name="bcn"></a>Behavioral & Cognitive Neuroscience (spring 2018/19) [¶](#bcn)
+## <a name="bcn"></a>Behavioral & Cognitive Neuroscience (spring semester 2018/19) [¶](#bcn)
 &nbsp;
 
 1. __Introduction__ (Thursday, 25<sup>th</sup> of February 2019)
@@ -76,7 +76,7 @@ title: Didactics
 
 
 ## <a name="bcn_additional"></a>Additional requirements for the course [¶](#bcn_additional)
-1. Present a scientific paper in the groups of 2 ([link for the registration](https://docs.google.com/spreadsheets/d/1gaSPaw7EIVKZhgho7mWuR0rn0XeVcEpNsIC1axKhwRU/edit?usp=sharing)).
+1. Present a scientific paper in the groups of 2.
 
 2. Design your own experiment utilizing approaches from behavioral and/or cognitive neuroscience (individually):
     * describe literature background of the study,
