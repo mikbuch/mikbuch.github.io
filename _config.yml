@@ -2,8 +2,8 @@ name: Mikołaj Buchwald
 description: >
     mikbuch
 about: >
-    PhD student at Adam Mickiewicz University in Poznań and Computer Systems
-    Analyst at Poznań Supercomputing and Networking Center
+    PhD student at Adam Mickiewicz University in Poznan and Computer Systems
+    Analyst at Poznan Supercomputing and Networking Center
 master_repo: false
 url: "http://mikbuch.github.io"
 markdown: kramdown
@@ -18,12 +18,12 @@ disqus_shortname:
 
 rtl: false
 owner:
-  name:           mikbuch
+  name:           About me
   avatar:         "https://avatars3.githubusercontent.com/u/10733514?s=400&u=289b804b29b3b8657c581311c8e77bd77af8c2b6&v=4"
   email:          "mikolaj.buchwald@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
-  twitter: MikolajBuchwald
-  github: https://github.com/cereberus
+  twitter: https://twitter.com/MikolajBuchwald
+  github: https://github.com/mikbuch
   stackexchange: https://unix.stackexchange.com/users/258734/mikolaj-buchwald
   # linkedin: https://www.linkedin.com/dummy_text
   # For Google Authorship https://plus.google.com/authorship
