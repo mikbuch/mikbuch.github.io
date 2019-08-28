@@ -147,6 +147,48 @@ c.NotebookApp.trust_xheaders = True
 
 ***
 
+## Troubleshooting
+
+### pipenv's ASCII vs. UTF-8
+
+Circumstances:
+ * basic system's Python version is 2.7
+ * virtual env uses Python 3 (e.g. 3.5)
+ * When trying to run `pipenv shell` command to go into venv's shell the following error is thrown:
+
+```bash
+aeneas@machine-gsr:~$ pipenv shell
+Traceback (most recent call last):
+  File "/usr/local/bin/pipenv", line 10, in <module>
+    sys.exit(cli())
+  File "/usr/local/lib/python3.5/dist-packages/pipenv/vendor/click/core.py", line 764, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/pipenv/vendor/click/core.py", line 696, in main
+    _verify_python3_env()
+  File "/usr/local/lib/python3.5/dist-packages/pipenv/vendor/click/_unicodefun.py", line 124, in _verify_python3_env
+    ' mitigation steps.' + extra
+RuntimeError: Click will abort further execution because Python 3 was configured to use ASCII as encoding for the environment. Consult https://click.palletsprojects.com/en/7.x/python3/ for mitigation steps.
+
+This system supports the C.UTF-8 locale which is recommended.
+You might be able to resolve your issue by exporting the
+following environment variables:
+
+    export LC_ALL=C.UTF-8
+    export LANG=C.UTF-8
+
+Click discovered that you exported a UTF-8 locale
+but the locale system could not pick up from it because
+it does not exist.  The exported locale is "en_US.UTF-8" but it
+is not supported
+```
+
+Solution:
+Indeed, appending exports to ~/.bashrc fixes the issue:
+```bash
+echo "export LC_ALL=C.UTF-8
+export LANG=C.UTF-8" >> ~/.bashrc && source ~/.bashrc
+```
+
 ### Sources
 
  * [Official documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-lets-encrypt)
