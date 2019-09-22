@@ -41,7 +41,7 @@ Add ditectory with local gems to PATH (in ~/.bashrc or ~/.zshrc):
 echo 'export PATH=/Users/$USER/.gem/ruby/2.3.0/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 ```
-where `$USER` is your user name for which bundle[r] was installed. 
+where `$USER` is your user name for which bundle[r] was installed.
 
 ### Run server
 
@@ -58,4 +58,11 @@ Note: be sure to run it from the main project directory, not for example from "_
 Update node packages:
 ```bash
 sudo npm audit fix
+```
+
+### Generate CSS
+```bash
+sudo npm install -g grunt-cli
+npm install
+grunt
 ```
