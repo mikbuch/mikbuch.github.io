@@ -2,10 +2,6 @@
   Global Reset
 ----------------------------------------------------------------------------*/
 
-* {
-  padding:0;
-  margin:0;
-}
 h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
 fieldset { padding: .5em; }
 select option{ padding:0 5px; }
@@ -283,9 +279,6 @@ p.intro a {
   color: #55acee;
 }
 
-h1 {
-  margin-right: 20px;
-}
 h1.words {
   color: #DB2C17;
 }

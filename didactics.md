@@ -7,13 +7,14 @@ title: Didactics
 
 ***
 
-## <a name="bcn"></a>Behavioral & Cognitive Neuroscience (spring semester 2018/19) [¶](#bcn)
+## <a name="bcn"></a>Behavioral & Cognitive Neuroscience[¶](#bcn)
+ (spring semester 2018/19)
 &nbsp;
 
 1. __Introduction__ (Thursday, 25<sup>th</sup> of February 2019)
     * Glasser, M. F., Smith, S. M., Marcus, D. S., Andersson, J. L., Auerbach, E. J., Behrens, T. E., ... & Robinson, E. C. (2016). The human connectome project's neuroimaging approach. _Nature neuroscience, 19_(9), 1175.
     * Lebedev, M. A., & Nicolelis, M. A. (2017). Brain-machine interfaces: From basic science to neuroprostheses and neurorehabilitation. _Physiological reviews, 97_(2), 767-837.
-    * (Additional literature) Page, M. P. (2006). What can't functional neuroimaging tell the cognitive psychologist?. _Cortex, 42(3)_, 428-443.
+    * (Additional literature) Page, M. P. (2006). What can't functional neuroimaging tell the cognitive psychologist? _Cortex, 42(3)_, 428-443.
         * Pure vs. applied science
 
 2. __Addiction__ (Wednesday, 6<sup>th</sup> of March 2019) <a href="https://www.dropbox.com/s/rzant5aj1p28hdi/02_Addiction.pdf?dl=0"><img src="/images/presentation.png" width="12px"></a>
@@ -67,7 +68,7 @@ title: Didactics
 14. __Final classes__ (Wednesday, 12<sup>th</sup> of June 2019)
     * Knowledge evaluation:
         * 5 open-ended questions from the pool of 10 subjects: _2. Addiction_, _3. Binge_, _4. Sleep_, _5. Learning and memory_, _6. Cognitive control_, _7. Action control_, _8. Spatial orientation_, _10. Function lateralization_, _11. Neural plasticity_, _13. Love and desire_ (tylko Lester & Gorzalka).
-        * + 3 supplementary close-ended questions concerning the methods of _behavioral & cognitive neuroscience_.
+        * \+ 3 supplementary close-ended questions concerning the methods of _behavioral & cognitive neuroscience_.
 
 <!-- Removed.
 13. __Cultural mind__ (Wednesday, 5<sup>th</sup> of June 2019)
