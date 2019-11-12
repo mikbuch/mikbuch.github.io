@@ -218,19 +218,44 @@ c.NotebookApp.password = u'sha1:bcd259ccf...<your hashed password here>'
 c.NotebookApp.trust_xheaders = True
 ```
 
-***
+### Run as a service
 
-In order to debug the notebook, running on port 80 as root, use the following config:
-```python
-c.NotebookApp.allow_origin = '*'
-c.NotebookApp.allow_remote_access = True
-c.NotebookApp.base_url = '/jupyter'
-c.NotebookApp.certfile = '/etc/certs/mycert.pem'
-c.NotebookApp.keyfile = '/etc/certs/mykey.key'
-c.NotebookApp.ip = 'localhost'
-c.NotebookApp.open_browser = False
-c.NotebookApp.password = u'sha1:9696<some_password>'
-c.NotebookApp.trust_xheaders = True
+Create the file with service:
+```bash
+vim /etc/systemd/system/jupyter.service
+```
+
+Change `$USER` to your user, and `$VENV_ID` to virtual environment ID.
+
+To get the virtual env directory:
+```bash
+ls ~/.local/share/virtualenvs/
+```
+
+The service:
+
+```bash
+[Unit]
+Description=Jupyter Workplace
+
+[Service]
+Type=simple
+PIDFile=/run/jupyter.pid
+ExecStart=/home/$USER/.local/share/virtualenvs/$USER-$VENV_ID/bin/jupyter-notebook --config=/home/$USER/.jupyter/jupyter_notebook_config.py
+User=$USER
+Group=$USER
+WorkingDirectory=/home/$USER
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Finally, start and enable the service:
+```bash
+sudo systemctl start jupyter.service
+sudo systemctl enable jupyter.service
 ```
 
 ***
@@ -276,6 +301,24 @@ Indeed, appending exports to ~/.bashrc fixes the issue:
 echo "export LC_ALL=C.UTF-8 export LANG=C.UTF-8" >> ~/.bashrc && source ~/.bashrc
 ```
 
+### Debugging as root at port 80
+
+In order to debug the notebook, running on port 80 as root, use the following config:
+```python
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.allow_remote_access = True
+c.NotebookApp.base_url = '/jupyter'
+c.NotebookApp.certfile = '/etc/certs/mycert.pem'
+c.NotebookApp.keyfile = '/etc/certs/mykey.key'
+c.NotebookApp.ip = 'localhost'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = u'sha1:9696<some_password>'
+c.NotebookApp.trust_xheaders = True
+```
+
+***
+
+
 ### Sources
 
  * [Official documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-lets-encrypt)
@@ -285,4 +328,4 @@ echo "export LC_ALL=C.UTF-8 export LANG=C.UTF-8" >> ~/.bashrc && source ~/.bashr
 
 ***
 
-Last modified on 7 Nov 2019
+Last modified on 12 Nov 2019
