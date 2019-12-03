@@ -28,7 +28,7 @@ Two articles introducing mathematical concept behind ICA:
 
 ### Removing artifacts from EEG signal
 
-Now we will analyze artifact detection and correction in EEG data with Python-MNE. An example for that is available in Documentation [here](https://mne.tools/stable/auto_tutorials/preprocessing/plot_40_artifact_correction_ica.html)) and as Ipython Notebook [here](https://mne.tools/stable/_downloads/8f7e6dfc30a66795f2d4e4ae5ca6d23e/plot_40_artifact_correction_ica.ipynb).
+Now we will analyze artifact detection and correction in EEG data with Python-MNE. An example for that is available in Documentation [here](https://mne.tools/stable/auto_tutorials/preprocessing/plot_40_artifact_correction_ica.html) and as IPython Notebook [here](https://mne.tools/stable/_downloads/8f7e6dfc30a66795f2d4e4ae5ca6d23e/plot_40_artifact_correction_ica.ipynb).
 
 ### Visualizing components of fMRI data
 
