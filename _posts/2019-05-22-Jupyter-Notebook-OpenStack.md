@@ -31,9 +31,32 @@ Remember to open port 443 on your OpenStack Instance, then `Soft Reboot` the ins
 Remember to open port 443 on your OpenStack Instance, then `Soft Reboot` the instance
 
 
+## Create user
+
+For security reasons, it's better to run a Juputer instance as a non-sudo user. Hence, you have to create one:
+```bash
+sudo useradd -m aeneas
+sudo passwd aeneas
+```
+Note: do not append this user to sudoers group.
+
+Note:
+ * `-m` is required to create user home directory
+ * to remove the user, use `userdel aeneas`
+
+Now terminate SSH session and connect as non-sudo created user:
+```
+ssh aeneas@IP -i ~/.ssh/SOME_CERT.pem
+```
+
+Where:
+ * IP is your server's ip, e.g., 123.123.123.123
+ * SOME_CERT is a file with private SSH key
+
+
 ## SSL Certificate
 
-In order to generate a self-signed certificate type in the following commands ((source for `openssl` key generation))[https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication]:
+In order to generate a self-signed certificate type in the following commands ((source for `openssl` key generation)[https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication]):
 ```bash
 mkdir ~/.certs
 cd ~/.certs
@@ -42,11 +65,36 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycer
 
 ## Install and configure Apache server
 
-This step is required in order to proxy your server (no need of running Jupyter Notebook as root).
+### Prerequisites
+
+For this you need `sudo` rights, so reconnect as sudo user, e.g.:
+```bash
+ssh debian@IP -i ~/.ssh/SOME_CERT.pem
+```
+
+Where:
+ * IP is your server's ip, e.g., 123.123.123.123
+ * SOME_CERT is a file with private SSH key
+
+### Install Apache
+
+Install and enable modules required by Jupyter.
+
+```bash
+sudo apt-get install apache2
+sudo a2enmod ssl
+```
+
+### Configure Apache
+
+This step is required in order to proxy your server (so there would be no need of running Jupyter Notebook as root).
 
 Make sure that self-signed certificates were generated (see previous step).
 
 Prepare the configuration file at `/etc/apache2/sites-available/jupyter.conf` with the following settings:
+
+__CAUTION!__ Replace SERVER_IP with your server's IP
+
 ```apache
 Listen 443
 <VirtualHost *:443>
@@ -64,14 +112,14 @@ Listen 443
   SSLProxyCheckPeerName off
   SSLProxyCheckPeerExpire off
 
-  Redirect permanent / https://150.254.165.72/jupyter
+  Redirect permanent / https://SERVER_IP/jupyter
 
   <Location /jupyter>
     # preserve Host header to avoid cross-origin problems
     ProxyPreserveHost on
     ProxyPass         https://localhost:8888/jupyter
     ProxyPassReverse  https://localhost:8888/jupyter
-    ProxyPassReverseCookieDomain localhost <ip or name of your server>
+    ProxyPassReverseCookieDomain localhost SERVER_IP
     RequestHeader set Origin "https://localhost:8888"
   </Location>
 
@@ -100,11 +148,50 @@ sudo service apache2 restart
 
 ## Install and configure Jupyter Notebook server
 
-Jupyter has to be run on a non-sudo user. Hence, create a new user, e.g.:
+You wish to use virtual environment. For that install `pipenv` with `pip`.
 ```bash
-sudo adduser aeneas
+sudo pip install pipenv
 ```
-Note: do not append this user to sudoers group.
+
+Jupyter has to be run on a non-sudo user. Hence, now terminate SSH session as `sudo` user and reconnect as non-sudo created user:
+```
+ssh aeneas@IP -i ~/.ssh/SOME_CERT.pem
+```
+
+Where:
+ * IP is your server's ip, e.g., 123.123.123.123
+ * SOME_CERT is a file with private SSH key
+
+Create Pipfile
+```bash
+vim ~/Pipfile
+```
+
+And paste the following content:
+```python
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+jupyter = "*"
+pandas = "*"
+matplotlib = "*"
+scipy = "*"
+ipdb = "*"
+seaborn = "*"
+sklearn = "*"
+statsmodels = "*"
+opencv-python = "*"
+notebook = "*"
+ipython="*"
+
+[requires]
+python_version = "3.7"
+```
 
 Create password and hash it ([source](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#preparing-a-hashed-password)):
 ```python
@@ -114,10 +201,11 @@ In [2]: passwd()
 
 Create Jupyter Notebook configuration file at `~/.jupyter/jupyter_notebook_config.py`:
 ```bash
+mkdir ~/.jupyter
 vim ~/.jupyter/jupyter_notebook_config.py
 ```
 
-Paste in the following configuration
+Paste in the following configuration:
 ```python
 c.NotebookApp.allow_origin = '*'
 c.NotebookApp.allow_remote_access = True
@@ -130,19 +218,44 @@ c.NotebookApp.password = u'sha1:bcd259ccf...<your hashed password here>'
 c.NotebookApp.trust_xheaders = True
 ```
 
-***
+### Run as a service
 
-In order to debug the notebook, running on port 80 as root, use the following config:
-```python
-c.NotebookApp.allow_origin = '*'
-c.NotebookApp.allow_remote_access = True
-c.NotebookApp.base_url = '/jupyter'
-c.NotebookApp.certfile = '/etc/certs/mycert.pem'
-c.NotebookApp.keyfile = '/etc/certs/mykey.key'
-c.NotebookApp.ip = 'localhost'
-c.NotebookApp.open_browser = False
-c.NotebookApp.password = u'sha1:9696<some_password>'
-c.NotebookApp.trust_xheaders = True
+Create the file with service:
+```bash
+vim /etc/systemd/system/jupyter.service
+```
+
+Change `$USER` to your user, and `$VENV_ID` to virtual environment ID.
+
+To get the virtual env directory:
+```bash
+ls ~/.local/share/virtualenvs/
+```
+
+The service:
+
+```bash
+[Unit]
+Description=Jupyter Workplace
+
+[Service]
+Type=simple
+PIDFile=/run/jupyter.pid
+ExecStart=/home/$USER/.local/share/virtualenvs/$USER-$VENV_ID/bin/jupyter-notebook --config=/home/$USER/.jupyter/jupyter_notebook_config.py
+User=$USER
+Group=$USER
+WorkingDirectory=/home/$USER
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Finally, start and enable the service:
+```bash
+sudo systemctl start jupyter.service
+sudo systemctl enable jupyter.service
 ```
 
 ***
@@ -185,9 +298,26 @@ is not supported
 Solution:
 Indeed, appending exports to ~/.bashrc fixes the issue:
 ```bash
-echo "export LC_ALL=C.UTF-8
-export LANG=C.UTF-8" >> ~/.bashrc && source ~/.bashrc
+echo "export LC_ALL=C.UTF-8 export LANG=C.UTF-8" >> ~/.bashrc && source ~/.bashrc
 ```
+
+### Debugging as root at port 80
+
+In order to debug the notebook, running on port 80 as root, use the following config:
+```python
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.allow_remote_access = True
+c.NotebookApp.base_url = '/jupyter'
+c.NotebookApp.certfile = '/etc/certs/mycert.pem'
+c.NotebookApp.keyfile = '/etc/certs/mykey.key'
+c.NotebookApp.ip = 'localhost'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = u'sha1:9696<some_password>'
+c.NotebookApp.trust_xheaders = True
+```
+
+***
+
 
 ### Sources
 
@@ -198,4 +328,4 @@ export LANG=C.UTF-8" >> ~/.bashrc && source ~/.bashrc
 
 ***
 
-Last modified on 28 June 2019
+Last modified on 12 Nov 2019
