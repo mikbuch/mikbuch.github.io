@@ -1,11 +1,7 @@
 ---
 layout: default
-title: Didactics
+title: BCN
 ---
-
-# Teaching materials
-
-***
 
 ## <a name="bcn"></a>Behavioral & Cognitive Neuroscience[¶](#bcn)
  (spring semester 2018/19)
