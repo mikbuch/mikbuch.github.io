@@ -85,7 +85,7 @@ In order to run Jupyter Notebook on a server, it's best you knew the following c
 
 Do-it-yourself version is provided with these two web pages:
    * [Official Jupyter Notebook documentation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html)
-   * [My blog post on how to run Jupyter on OpenStack](http://localhost:4000/articles/2019/05/22/Jupyter-Notebook-OpenStack.html)
+   * [My blog post on how to run Jupyter on OpenStack](http://mikbuch.github.io/articles/2019/05/22/Jupyter-Notebook-OpenStack.html)
 
 ## 4. Server tools:
 
