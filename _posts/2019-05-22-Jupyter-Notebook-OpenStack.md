@@ -56,7 +56,7 @@ Where:
 
 ## SSL Certificate
 
-In order to generate a self-signed certificate type in the following commands ((source for `openssl` key generation)[https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication]):
+In order to generate a self-signed certificate type in the following commands ([source for `openssl` key generation](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication)):
 ```bash
 mkdir ~/.certs
 cd ~/.certs
@@ -328,4 +328,4 @@ c.NotebookApp.trust_xheaders = True
 
 ***
 
-Last modified on 12 Nov 2019
+Last modified on Jan 20, 2020
