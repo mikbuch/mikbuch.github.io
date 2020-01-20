@@ -187,7 +187,7 @@ Magnificent, heavy, feature-packed:
 SSH:
   * public vs. private key
   * password-based vs. certificate-based
-  * command line vs PuTTY
+  * command line vs. PuTTY
   
 
 ***
