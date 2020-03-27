@@ -1,50 +1,64 @@
 ---
 layout: post
-title: "Jupyter on OpenStack"
-description: "Jupyter Notebook configuration on OpenStack-hosted server"
+title: "Jupyter Notebook Server"
+description: "How to setup Jupyter Notebook server"
 category: articles
-tags: [Jupyter Notebook, OpenStack, Apache, config]
+tags: [Jupyter Notebook, server, Apache, config]
 comments: false
 ---
 
 Creating an instance of a virtual machine on OpenStack that will host Jupyter Notebook server proxied trough an Apache server.
+
+The content here is mostly based on the information from the [official Jupyter Notebook documentation](https://jupyter-notebook.readthedocs.io/en/stable/config_overview.html). However, here only the essential information are provided, i.e., what is needed to quickly setup you Notebook server.
 
 # How to setup Jupyter Notebook server on OpenStack
 
 This tutorial will guide you trough configuration of an externally-accessible (trough Internet) Jupyter Notebook server.
 
 Steps:
-1. [Setup instance and network on OpenStack](#setup-instance-and-network-on-openstack)
+1. [Setup instance and network your server hosting Jupyter Notebook](#setup-instance-and-network-on-server)
 2. [Configure SSH connection](#configure-ssh-connection)
-3. [SSL certificate](#ssl-certificate)
-4. [Install and configure Apache server](#install-and-configure-apache-server)
-5. [Install and configure Jupyter Notebook server](#install-and-configure-jupyter-notebook-server)
+3. [Create a user](#create-a-user)
+4. [SSL certificate](#ssl-certificate)
+7. [Install and configure Apache server](#install-and-configure-apache-server)
+6. [Install and configure Jupyter Notebook server](#install-and-configure-jupyter-notebook-server)
 
 
-## Setup instance and network on OpenStack
+## Setup instance and network on server
 
-Remember to open port 443 on your OpenStack Instance, then `Soft Reboot` the instance
+Remember to open port 443 on your firewall.
 
 
 ## Configure SSH connection
 
-Remember to open port 443 on your OpenStack Instance, then `Soft Reboot` the instance
+Make sure that you have SSH connection and you know root password for your machine.
 
 
-## Create user
+## Create a user
 
 For security reasons, it's better to run a Juputer instance as a non-sudo user. Hence, you have to create one:
 ```bash
 sudo useradd -m aeneas
 sudo passwd aeneas
 ```
-Note: do not append this user to sudoers group.
-
 Note:
  * `-m` is required to create user home directory
  * to remove the user, use `userdel aeneas`
 
-Now terminate SSH session and connect as non-sudo created user:
+To make sure that the user was created, you can inspect `/etc/passwords` with:
+```bash
+cat /etc/passwd
+```
+or:
+```bash
+awk -F':' '{ print $1}' /etc/passwd
+```
+(See [this](https://www.cyberciti.biz/faq/linux-list-users-command/) nixCraft FAQ entry for more details.)
+
+Note:
+ * do not append this user to sudoers group.
+
+Now, terminate SSH session and connect as non-sudo created user:
 ```
 ssh aeneas@IP -i ~/.ssh/SOME_CERT.pem
 ```
@@ -328,4 +342,4 @@ c.NotebookApp.trust_xheaders = True
 
 ***
 
-Last modified on Jan 20, 2020
+Last modified on Mar 27, 2020

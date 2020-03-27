@@ -1,4 +1,4 @@
-## mikbuch's page based on White Paper
+## mikbuch's page based on White Paper theme
 
 White Paper is a Jekyll theme -- https://github.com/vinitkumar/white-paper
 
@@ -38,7 +38,7 @@ bundle install
 
 Add ditectory with local gems to PATH (in ~/.bashrc or ~/.zshrc):
 ```bash
-echo 'export PATH=/Users/$USER/.gem/ruby/2.3.0/bin:$PATH' >> ~/.zshrc
+echo 'export PATH=/Users/$USER/.gem/ruby/2.6.0/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 ```
 where `$USER` is your user name for which bundle[r] was installed.
@@ -51,6 +51,13 @@ bundle exec jekyll serve
 ```
 Note: be sure to run it from the main project directory, not for example from "_posts".
 
+### Generate CSS
+```bash
+sudo npm install -g grunt-cli
+npm install
+grunt
+```
+
 ### Troubleshooting
 
 #### Packages vulnerabilities
@@ -60,9 +67,23 @@ Update node packages:
 sudo npm audit fix
 ```
 
-### Generate CSS
+#### Mind which Ruby version you have installed
+
+Depending on the Ruby version you have install you may need to use `bundle` different directory, e.g.,:
 ```bash
-sudo npm install -g grunt-cli
-npm install
-grunt
+echo 'export PATH=/Users/$USER/.gem/ruby/2.6.0/bin:$PATH' >> ~/.zshrc
+```
+or:
+```bash
+echo 'export PATH=/Users/$USER/.gem/ruby/2.3.0/bin:$PATH' >> ~/.zshrc
+```
+
+Otherwise you will get error like (macOS):
+```bash
+zsh: /Users/$USER/.gem/ruby/2.3.0/bin/bundle: bad interpreter: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: no such file or directory
+```
+
+To determine which Ruby version you have installed run:
+```bash
+ls /System/Library/Frameworks/Ruby.framework/Versions/
 ```
