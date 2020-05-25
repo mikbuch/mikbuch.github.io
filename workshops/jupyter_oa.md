@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ICA
+title: Jupyter OA
 ---
 
 # <a name="jupyter_oa"></a>Jupyter Notebook and server utilities[¶](#jupyter_oa)
