@@ -16,7 +16,7 @@ Workshop on creating expert systems for supporting diagnostic process in telemed
   * Eren, H., & Webster, J. G. (Eds.). (2018). Telemedicine and electronic medicine. CRC Press. [[link](https://bit.ly/2UsnUI1)]
 
 ## Materials used during classes
-  * Jupyter Notebook example from classes [[link](https://drive.google.com/open?id=1IPpQIPK3jxR_mccNNUed0O8jM6CLYvI5)]
+  * Jupyter Notebook example from classes [[link](https://colab.research.google.com/drive/1IPpQIPK3jxR_mccNNUed0O8jM6CLYvI5)]
   * Human Connectome Project resources [[link](http://www.humanconnectomeproject.org/)]
   * Imaging and MRI diagnostics/radiology basics [[link](https://casemed.case.edu/clerkships/neurology/Web%20Neurorad/MRI%20Basics.htm)]
   * Visualising neuroimaging data with Python [[link](https://plotly.com/python/visualizing-mri-volume-slices/)]
