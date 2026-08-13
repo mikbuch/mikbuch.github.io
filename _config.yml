@@ -1,9 +1,7 @@
 name: Mikołaj Buchwald
 description: >
     mikbuch
-about: >
-    PhD student at Adam Mickiewicz University in Poznan and Computer Systems
-    Analyst at Poznan Supercomputing and Networking Center
+about:
 master_repo: false
 url: "http://mikbuch.github.io"
 markdown: kramdown

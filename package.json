@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "7.5.0"
+    "node": ">=18"
   },
   "devDependencies": {
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-rtlcss": "^2.0.1"
-  },
-  "dependencies": {
-    "grunt": "^1.0.3"
+    "grunt": "^1.6.1",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-cssmin": "^5.0.0"
   }
 }
